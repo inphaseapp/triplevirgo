@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+  <defs>
+    <radialGradient id="starGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F4F1EC" stop-opacity="1"/>
+      <stop offset="40%" stop-color="#D4B896" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#D4B896" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="lineGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8E4DD" stop-opacity="0.75"/>
+      <stop offset="50%" stop-color="#D4B896" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#C9A590" stop-opacity="0.7"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="105" r="78" stroke="#3D3558" stroke-opacity="0.28" stroke-width="0.6" stroke-dasharray="0.8 3.2"/>
+  <circle cx="100" cy="105" r="68" stroke="#3D3558" stroke-opacity="0.18" stroke-width="0.5" stroke-dasharray="0.6 2.8"/>
+  <circle cx="100" cy="105" r="58" stroke="#3D3558" stroke-opacity="0.14" stroke-width="0.45" stroke-dasharray="0.5 2.4"/>
+  <path d="M100 32 L168 152 L32 152 Z" stroke="#1A2038" stroke-opacity="0.85" stroke-width="1.35" stroke-linejoin="round"/>
+  <circle cx="100" cy="112" r="36" stroke="#1A2038" stroke-opacity="0.55" stroke-width="1"/>
+  <line x1="100" y1="32" x2="100" y2="152" stroke="#1A2038" stroke-opacity="0.35" stroke-width="0.7"/>
+  <circle cx="100" cy="32" r="12" fill="url(#starGlow)"/>
+  <path d="M100 22 L101.2 30.8 L110 32 L101.2 33.2 L100 42 L98.8 33.2 L90 32 L98.8 30.8 Z" fill="#1A2038" fill-opacity="0.95"/>
+  <circle cx="100" cy="112" r="14" fill="url(#starGlow)"/>
+  <path d="M100 100 L101.4 110.6 L112 112 L101.4 113.4 L100 124 L98.6 113.4 L88 112 L98.6 110.6 Z" fill="#1A2038"/>
+  <circle cx="168" cy="152" r="11" fill="url(#starGlow)"/>
+  <path d="M168 143 L169.1 150.9 L177 152 L169.1 153.1 L168 161 L166.9 153.1 L159 152 L166.9 150.9 Z" fill="#1A2038" fill-opacity="0.95"/>
+  <circle cx="32" cy="152" r="11" fill="url(#starGlow)"/>
+  <path d="M32 143 L33.1 150.9 L41 152 L33.1 153.1 L32 161 L30.9 153.1 L23 152 L30.9 150.9 Z" fill="#1A2038" fill-opacity="0.95"/>
+</svg>

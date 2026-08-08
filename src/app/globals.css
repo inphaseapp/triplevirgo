@@ -1,26 +1,508 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Dusk sky — darkest at the top, lifting into mist */
+  --dusk-deep: #4a5678;
+  --dusk-mid: #7d87a8;
+  --dusk-soft: #b4b9d0;
+  --dusk-mist: #ddd9e8;
+  --dusk-pearl: #f0ebe4;
+  --dusk-glow: #e8e0f0;
+
+  /* Ink — logo & type (darkest elements) */
+  --ink: #1a2038;
+  --ink-soft: #2c3450;
+  --ink-muted: rgba(26, 32, 56, 0.62);
+  --ink-faint: rgba(26, 32, 56, 0.42);
+
+  /* Accents */
+  --rose-gold: #b88972;
+  --warm-gold: #c4a07a;
+  --lilac: #9a8fb8;
+  --pearl: #f7f3ee;
+  --silver: #8a90a8;
+
+  /* Legacy aliases mapped to dusk system */
+  --navy: var(--ink);
+  --midnight: var(--dusk-deep);
+  --indigo: var(--dusk-mid);
+  --cosmic: var(--dusk-soft);
+  --soft-white: var(--ink-soft);
+  --muted: var(--ink-muted);
+  --line: rgba(184, 137, 114, 0.28);
+  --glass: rgba(255, 255, 255, 0.38);
+  --glass-border: rgba(26, 32, 56, 0.1);
+
+  --space-section-y: clamp(7.5rem, 14vw, 11.5rem);
+  --space-section-x: clamp(1.5rem, 6vw, 6rem);
+  --space-block: clamp(3.5rem, 7vw, 5.5rem);
+  --space-stack: clamp(1.75rem, 3vw, 2.5rem);
+  --space-tight: clamp(0.85rem, 1.4vw, 1.15rem);
+  --measure-editorial: 34rem;
+  --measure-wide: 42rem;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-navy: var(--navy);
+  --color-midnight: var(--midnight);
+  --color-indigo: var(--indigo);
+  --color-cosmic: var(--cosmic);
+  --color-pearl: var(--pearl);
+  --color-silver: var(--silver);
+  --color-rose-gold: var(--rose-gold);
+  --color-warm-gold: var(--warm-gold);
+  --color-soft-white: var(--soft-white);
+  --color-muted: var(--muted);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-dusk-deep: var(--dusk-deep);
+  --color-dusk-mid: var(--dusk-mid);
+  --color-dusk-soft: var(--dusk-soft);
+  --color-dusk-mist: var(--dusk-mist);
+  --color-dusk-pearl: var(--dusk-pearl);
+  --color-lilac: var(--lilac);
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Dusk world for everything below the night hero.
+     Hero paints its own midnight sky; this gradient receives the scroll. */
+  background: linear-gradient(
+    180deg,
+    #3d4668 0%,
+    #6a7394 14%,
+    #8a92b0 28%,
+    #b8b9ce 48%,
+    #ddd8e6 72%,
+    #efeae3 100%
+  );
+  background-attachment: fixed;
+  color: var(--ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(184, 137, 114, 0.28);
+  color: var(--ink);
+}
+
+.font-serif {
+  font-family: var(--font-serif), Georgia, serif;
+}
+
+.section-pad {
+  padding-inline: var(--space-section-x);
+}
+
+.section-y {
+  padding-block: var(--space-section-y);
+}
+
+.editorial-measure {
+  max-width: var(--measure-editorial);
+}
+
+.space-block {
+  margin-top: var(--space-block);
+}
+
+.space-stack > * + * {
+  margin-top: var(--space-stack);
+}
+
+.shimmer-text {
+  background: linear-gradient(
+    120deg,
+    var(--ink) 0%,
+    var(--lilac) 35%,
+    var(--ink-soft) 55%,
+    var(--rose-gold) 75%,
+    var(--ink) 100%
+  );
+  background-size: 220% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer-shift 12s ease-in-out infinite;
+}
+
+@keyframes shimmer-shift {
+  0%,
+  100% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes fade-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-rise {
+  animation: fade-rise 1.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-twinkle {
+  animation: twinkle var(--twinkle-duration, 4s) ease-in-out infinite;
+  animation-delay: var(--twinkle-delay, 0s);
+}
+
+.logo-shimmer {
+  filter: drop-shadow(0 2px 18px rgba(26, 32, 56, 0.18));
+}
+
+.logo-sacred {
+  filter: drop-shadow(0 0 20px rgba(244, 241, 236, 0.22));
+}
+
+/* Gentle shimmer — only the three vertex stars */
+.logo-sacred .star-vertex {
+  animation: star-shimmer 6.5s ease-in-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+.logo-sacred .star-vertex:nth-of-type(1) {
+  animation-delay: 0s;
+}
+
+.logo-sacred .star-vertex:nth-of-type(2) {
+  animation-delay: 2.1s;
+}
+
+.logo-sacred .star-vertex:nth-of-type(3) {
+  animation-delay: 4.2s;
+}
+
+@keyframes star-shimmer {
+  0%,
+  100% {
+    opacity: 0.88;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-sacred .star-vertex {
+    animation: none;
+    opacity: 1;
+  }
+
+  .virgo-star {
+    animation: none !important;
+  }
+}
+
+/* Mission — guiding stars behind philosophy words */
+.mission-guiding-star {
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  animation: mission-star-pulse 8.5s ease-in-out infinite;
+}
+
+.mission-star-aura {
+  position: absolute;
+  inset: -18%;
+  border-radius: 9999px;
+  background: radial-gradient(
+    circle,
+    rgba(232, 213, 196, 0.42) 0%,
+    rgba(196, 160, 122, 0.18) 38%,
+    rgba(184, 137, 114, 0.06) 62%,
+    transparent 74%
+  );
+}
+
+.mission-star-rays {
+  opacity: 0.35;
+}
+
+.mission-star-mark {
+  opacity: 0.7;
+}
+
+@keyframes mission-star-pulse {
+  0%,
+  100% {
+    opacity: 0.72;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.95;
+    transform: translate(-50%, -50%) scale(1.04);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mission-guiding-star {
+    animation: none;
+    opacity: 0.85;
+  }
+}
+
+/* Virgo — slow celestial twinkle (Easter egg, not a diagram) */
+.virgo-star {
+  animation: virgo-twinkle var(--twinkle-duration, 5.5s) ease-in-out infinite;
+  animation-delay: var(--twinkle-delay, 0s);
+}
+
+@keyframes virgo-twinkle {
+  0%,
+  100% {
+    opacity: 0.65;
+  }
+  40% {
+    opacity: 0.85;
+  }
+  55% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.75;
+  }
+}
+
+.glass-panel {
+  background: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.45) 0%,
+    rgba(255, 255, 255, 0.22) 100%
+  );
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1.05rem 2.15rem;
+  border-radius: 2px;
+  background: linear-gradient(
+    135deg,
+    rgba(26, 32, 56, 0.9) 0%,
+    rgba(44, 52, 80, 0.88) 100%
+  );
+  border: 1px solid rgba(26, 32, 56, 0.35);
+  color: var(--pearl);
+  font-size: 0.8125rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  transition:
+    border-color 0.6s ease,
+    background 0.6s ease,
+    box-shadow 0.6s ease,
+    transform 0.6s ease;
+}
+
+.btn-primary:hover {
+  border-color: rgba(26, 32, 56, 0.55);
+  background: linear-gradient(
+    135deg,
+    rgba(26, 32, 56, 0.96) 0%,
+    rgba(60, 52, 90, 0.92) 100%
+  );
+  box-shadow: 0 8px 28px rgba(26, 32, 56, 0.18);
+}
+
+.btn-primary:focus-visible {
+  outline: 2px solid var(--warm-gold);
+  outline-offset: 3px;
+}
+
+/* CTA on night sky — soft pearl glass, not neon */
+.btn-primary-night {
+  background: linear-gradient(
+    135deg,
+    rgba(247, 243, 238, 0.12) 0%,
+    rgba(247, 243, 238, 0.06) 100%
+  );
+  border: 1px solid rgba(247, 243, 238, 0.28);
+  color: var(--pearl);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.btn-primary-night:hover {
+  border-color: rgba(247, 243, 238, 0.45);
+  background: linear-gradient(
+    135deg,
+    rgba(247, 243, 238, 0.18) 0%,
+    rgba(247, 243, 238, 0.1) 100%
+  );
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+  border: 1px solid rgba(26, 32, 56, 0.18);
+  color: var(--ink);
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  transition:
+    border-color 0.6s ease,
+    background 0.6s ease,
+    box-shadow 0.6s ease;
+}
+
+.btn-ghost:hover {
+  border-color: rgba(26, 32, 56, 0.35);
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 6px 20px rgba(26, 32, 56, 0.08);
+}
+
+.btn-ghost:focus-visible,
+.nav-link:focus-visible,
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--warm-gold);
+  outline-offset: 3px;
+}
+
+.btn-ghost:disabled,
+.btn-primary:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.nav-link {
+  color: rgba(26, 32, 56, 0.62);
+  font-size: 0.8125rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: color 0.5s ease;
+}
+
+.nav-link:hover,
+.nav-link[data-active="true"] {
+  color: var(--ink);
+}
+
+.nav-link-night {
+  color: rgba(247, 243, 238, 0.62);
+  font-size: 0.8125rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: color 0.5s ease;
+}
+
+.nav-link-night:hover,
+.nav-link-night[data-active="true"] {
+  color: var(--pearl);
+}
+
+.section-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--rose-gold);
+}
+
+.section-intro {
+  margin-bottom: var(--space-block);
+}
+
+.section-intro .section-label {
+  margin-bottom: var(--space-tight);
+}
+
+.section-intro p:not(.section-label) {
+  margin-top: var(--space-stack);
+  max-width: var(--measure-wide);
+  line-height: 1.85;
+}
+
+.cosmic-bg {
+  background: linear-gradient(
+    180deg,
+    #6a7394 0%,
+    #9aa1bb 35%,
+    #cfcbdc 70%,
+    #efeae3 100%
+  );
+}
+
+.divider-line {
+  height: 1px;
+  margin-inline: auto;
+  max-width: 12rem;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(26, 32, 56, 0.18),
+    transparent
+  );
 }
