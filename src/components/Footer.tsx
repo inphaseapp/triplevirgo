@@ -21,6 +21,14 @@ export function Footer() {
         <nav aria-label="Footer">
           <ul className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
             <li>
+              <Link
+                href="/triplevirgo"
+                className="nav-link normal-case tracking-[0.1em]"
+              >
+                triplevirgo
+              </Link>
+            </li>
+            <li>
               <Link href="/privacy" className="nav-link normal-case tracking-[0.1em]">
                 Privacy Policy
               </Link>
