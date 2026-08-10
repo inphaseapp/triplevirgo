@@ -17,19 +17,19 @@ export function Philosophy() {
 
       <OrbitalWhisper className="pointer-events-none absolute -left-8 bottom-[12%] h-28 w-28 text-ink opacity-40 md:left-8 md:h-36 md:w-36" />
 
-      <div className="section-pad relative mx-auto max-w-3xl">
-        <div className="section-intro">
+      <div className="section-pad relative mx-auto max-w-3xl text-center">
+        <div className="section-intro mx-auto">
           <p className="section-label">Philosophy</p>
           <h2
             id="philosophy-heading"
-            className="mt-5 font-serif text-[clamp(2.35rem,5vw,3.85rem)] leading-[1.1] text-ink"
+            className="section-heading mt-5 font-serif text-[clamp(2.35rem,5vw,3.85rem)] leading-[1.1]"
           >
             Our Philosophy
           </h2>
         </div>
 
-        <div className="editorial-measure space-y-10 text-lg leading-[2] text-ink/60 md:space-y-12 md:text-[1.2rem]">
-          <p className="font-serif text-[clamp(1.4rem,2.6vw,1.85rem)] leading-[1.55] text-ink">
+        <div className="mx-auto max-w-xl space-y-9 text-lg leading-[2] text-ink/60 md:space-y-11 md:text-[1.15rem]">
+          <p className="font-serif text-[clamp(1.35rem,2.5vw,1.75rem)] leading-[1.55] text-ink">
             Technology should help people become more human, not less.
           </p>
 
@@ -45,9 +45,9 @@ export function Philosophy() {
             noise.
           </p>
 
-          <p className="pt-2">Everything we build begins with a simple question:</p>
+          <p className="pt-4">Everything we build begins with a simple question:</p>
 
-          <blockquote className="border-l border-rose-gold/50 py-2 pl-8 font-serif text-[clamp(1.3rem,2.5vw,1.7rem)] leading-[1.55] text-ink md:pl-10">
+          <blockquote className="mx-auto mt-2 max-w-md border-t border-rose-gold/40 pt-10 font-serif text-[clamp(1.3rem,2.5vw,1.7rem)] leading-[1.55] text-ink">
             &ldquo;How can technology help us better understand ourselves and
             each other?&rdquo;
           </blockquote>

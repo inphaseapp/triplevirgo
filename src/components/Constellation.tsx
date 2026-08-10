@@ -53,13 +53,13 @@ function StarCard({
           {star.name}
         </h3>
       </div>
-      <p className="mx-auto mt-3 max-w-[240px] text-sm leading-[1.55] text-ink/80">
+      <p className="mx-auto mt-3.5 max-w-[240px] text-sm leading-[1.55] text-ink/80">
         {star.lead}
       </p>
-      <p className="mx-auto mt-3 max-w-[240px] text-sm leading-[1.75] text-ink/55">
+      <p className="mx-auto mt-4 max-w-[240px] text-sm leading-[1.8] text-ink/55">
         {star.description}
       </p>
-      <div className="mt-5">
+      <div className="mt-7">
         {star.available && star.href ? (
           <a
             href={star.href}
@@ -125,7 +125,7 @@ export function Constellation() {
           <p className="section-label">Our Constellation</p>
           <h2
             id="constellation-heading"
-            className="mt-5 font-serif text-[clamp(2.1rem,4.2vw,3.25rem)] leading-[1.15] text-ink"
+            className="section-heading mt-5 font-serif text-[clamp(2.1rem,4.2vw,3.25rem)] leading-[1.15]"
           >
             Many products. One philosophy.
           </h2>
@@ -140,7 +140,7 @@ export function Constellation() {
         <div ref={ref}>
           {/* Mobile — natural stack */}
           <div className="relative md:hidden">
-            <ul className="relative flex list-none flex-col items-center gap-20 pt-4">
+            <ul className="relative flex list-none flex-col items-center gap-24 pt-8 md:pt-4">
               {stars.map((star, i) => (
                 <li
                   key={star.name}
@@ -156,7 +156,7 @@ export function Constellation() {
           </div>
 
           {/* Desktop — three luminous points */}
-          <div className="relative mx-auto hidden min-h-[720px] w-full max-w-5xl md:block lg:min-h-[780px]">
+          <div className="relative mx-auto mt-4 hidden min-h-[760px] w-full max-w-5xl md:mt-8 md:block lg:min-h-[820px]">
             <ul className="absolute inset-0 list-none">
               {stars.map((star, i) => (
                 <li
@@ -176,7 +176,7 @@ export function Constellation() {
           </div>
         </div>
 
-        <p className="mx-auto mt-16 max-w-sm text-center text-sm leading-[1.85] tracking-wide text-ink/40 md:mt-12">
+        <p className="mx-auto mt-20 max-w-sm text-center text-sm leading-[1.9] tracking-wide text-ink/40 md:mt-24">
           One constellation under the TripleVirgo philosophy — with room for
           new stars to appear.
         </p>

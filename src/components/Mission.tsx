@@ -50,26 +50,26 @@ export function Mission() {
           <p className="section-label">Mission</p>
           <h2
             id="mission-heading"
-            className="mt-5 font-serif text-[clamp(2.35rem,5vw,3.6rem)] leading-[1.1] text-ink"
+            className="section-heading mt-5 font-serif text-[clamp(2.35rem,5vw,3.6rem)] leading-[1.1]"
           >
             Why TripleVirgo Exists
           </h2>
         </div>
 
-        <div className="mx-auto max-w-md space-y-7 text-lg leading-[1.9] text-ink/60 md:space-y-8 md:text-[1.15rem]">
+        <div className="mx-auto max-w-md space-y-8 text-lg leading-[1.95] text-ink/60 md:space-y-9 md:text-[1.15rem]">
           <p className="font-serif text-[clamp(1.35rem,2.5vw,1.75rem)] leading-[1.5] text-ink">
             We believe understanding creates compassion.
           </p>
           <p>Compassion creates connection.</p>
           <p>Connection creates a better world.</p>
-          <p className="pt-4 text-ink/80">
+          <p className="pt-6 text-ink/80">
             Every product we build exists in service of that vision.
           </p>
         </div>
 
         <div
           ref={ref}
-          className="relative mx-auto mt-24 max-w-lg md:mt-28"
+          className="relative mx-auto mt-28 max-w-lg md:mt-36"
           aria-label="Path from understanding to love"
         >
           {/* Constellation thread — quiet path between guiding stars */}
@@ -85,11 +85,11 @@ export function Mission() {
             }}
           />
 
-          <ol className="relative flex list-none flex-col items-center gap-14 md:gap-16">
+          <ol className="relative flex list-none flex-col items-center gap-16 md:gap-[4.5rem]">
             {nodes.map((label, i) => (
               <li
                 key={label}
-                className="relative flex min-h-14 w-full items-center justify-center"
+                className="relative flex min-h-16 w-full items-center justify-center"
                 style={{
                   opacity: visible ? 1 : 0,
                   transform: visible ? "translateY(0)" : "translateY(8px)",

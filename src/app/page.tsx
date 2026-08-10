@@ -37,13 +37,13 @@ export default function HomePage() {
       <Nav />
       <main id="main">
         <Hero />
-        <BrandDivider className="py-2" />
+        <BrandDivider className="section-pause" />
         <Constellation />
-        <BrandDivider className="py-2" />
+        <BrandDivider className="section-pause" />
         <Philosophy />
-        <BrandDivider className="py-2" />
+        <BrandDivider className="section-pause" />
         <Mission />
-        <BrandDivider className="py-2" />
+        <BrandDivider className="section-pause" />
         <Connect />
       </main>
       <Footer />

@@ -50,10 +50,10 @@ export function Hero() {
 
       <div className="h-[5.25rem] shrink-0" aria-hidden="true" />
 
-      <div className="section-pad relative z-10 mx-auto flex w-full max-w-2xl flex-1 flex-col items-center justify-center px-4 pb-28 pt-6 text-center md:pb-32 md:pt-8">
+      <div className="section-pad relative z-10 mx-auto flex w-full max-w-2xl flex-1 flex-col items-center justify-center px-4 pb-28 pt-6 text-center md:pb-36 md:pt-10">
         {/* Official logo — identity mark, room to breathe */}
         <div
-          className="animate-fade-rise relative mb-6 w-[min(88vw,420px)] md:mb-8 md:w-[480px]"
+          className="animate-fade-rise relative mb-8 w-[min(88vw,420px)] md:mb-12 md:w-[480px]"
           style={{ animationDelay: "0.12s" }}
         >
           {/* Soft aura behind the mark — filter would break mix-blend */}
@@ -73,14 +73,14 @@ export function Hero() {
 
         <h1
           id="hero-heading"
-          className="animate-fade-rise mt-4 max-w-2xl font-serif text-[clamp(2.1rem,5vw,3.5rem)] leading-[1.14] tracking-tight text-pearl md:mt-6"
+          className="animate-fade-rise mt-6 max-w-2xl font-serif text-[clamp(2.1rem,5vw,3.5rem)] leading-[1.14] tracking-tight text-pearl md:mt-8"
           style={{ animationDelay: "0.4s" }}
         >
           Live in greater alignment.
         </h1>
 
         <p
-          className="animate-fade-rise mx-auto mt-7 max-w-md text-base leading-[1.9] text-pearl/65 md:mt-8 md:text-lg"
+          className="animate-fade-rise mx-auto mt-8 max-w-md text-base leading-[1.95] text-pearl/65 md:mt-10 md:text-lg"
           style={{ animationDelay: "0.6s" }}
         >
           Thoughtfully designed applications for relationships, personal growth,
@@ -89,7 +89,7 @@ export function Hero() {
         </p>
 
         <div
-          className="animate-fade-rise mt-12 md:mt-14"
+          className="animate-fade-rise mt-14 md:mt-16"
           style={{ animationDelay: "0.8s" }}
         >
           <a href="#constellation" className="btn-primary btn-primary-night">

@@ -33,11 +33,11 @@
   --glass: rgba(255, 255, 255, 0.38);
   --glass-border: rgba(26, 32, 56, 0.1);
 
-  --space-section-y: clamp(7.5rem, 14vw, 11.5rem);
+  --space-section-y: clamp(8.5rem, 16vw, 13rem);
   --space-section-x: clamp(1.5rem, 6vw, 6rem);
-  --space-block: clamp(3.5rem, 7vw, 5.5rem);
-  --space-stack: clamp(1.75rem, 3vw, 2.5rem);
-  --space-tight: clamp(0.85rem, 1.4vw, 1.15rem);
+  --space-block: clamp(4rem, 8vw, 6.5rem);
+  --space-stack: clamp(2rem, 3.5vw, 2.75rem);
+  --space-tight: clamp(1rem, 1.6vw, 1.35rem);
   --measure-editorial: 34rem;
   --measure-wide: 42rem;
 }
@@ -468,7 +468,16 @@ input:focus-visible {
   font-size: 0.7rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--rose-gold);
+  color: #9a6f5a;
+}
+
+/* Section titles — deeper ink + soft pearl luminosity (not neon) */
+.section-heading {
+  color: #121828;
+  text-shadow:
+    0 0 28px rgba(247, 243, 238, 0.65),
+    0 0 56px rgba(232, 213, 196, 0.28),
+    0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .section-intro {
@@ -481,6 +490,7 @@ input:focus-visible {
 
 .section-intro p:not(.section-label) {
   margin-top: var(--space-stack);
+  margin-inline: auto;
   max-width: var(--measure-wide);
   line-height: 1.85;
 }
@@ -505,4 +515,9 @@ input:focus-visible {
     rgba(26, 32, 56, 0.18),
     transparent
   );
+}
+
+/* Quiet pause between major sections */
+.section-pause {
+  padding-block: clamp(1.25rem, 3vw, 2.25rem);
 }
