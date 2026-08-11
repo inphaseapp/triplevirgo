@@ -29,6 +29,11 @@ export function Footer() {
               </Link>
             </li>
             <li>
+              <Link href="/press" className="nav-link normal-case tracking-[0.1em]">
+                Brand Resources
+              </Link>
+            </li>
+            <li>
               <Link href="/privacy" className="nav-link normal-case tracking-[0.1em]">
                 Privacy Policy
               </Link>

@@ -13,7 +13,7 @@ export function BrandMark({ className = "", priority = false }: BrandMarkProps) 
   return (
     <div className={`relative ${className}`}>
       <Image
-        src="/brand/triplevirgo-mark.jpg"
+        src="/brand/triplevirgo-lockup.jpg"
         alt="triplevirgo — Building technology that inspires understanding"
         width={1024}
         height={1024}
