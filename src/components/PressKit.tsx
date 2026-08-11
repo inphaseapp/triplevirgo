@@ -8,7 +8,9 @@ import {
   constellationIntro,
   downloadGroups,
   founderCopy,
+  pressFaq,
   pressSections,
+  productPalettes,
   products,
   typography,
   voiceDo,
@@ -623,49 +625,95 @@ export function PressKit() {
 
           {/* Colors */}
           <section aria-labelledby="colors">
-            <SectionHeading id="colors" label="Colors" title="Dusk palette" />
+            <SectionHeading id="colors" label="Colors" title="Color systems" />
             <p className="mt-8 max-w-xl text-base leading-[1.9] text-ink/55">
-              Night belongs to the cosmos entry. The living world is dusk —
-              ink darkest, surroundings lifting into mist and pearl. No neon.
+              Company surfaces live in dusk. Each product carries its own
+              material language — use the strip that matches the brand.
             </p>
 
-            <ul className="mt-14 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3">
-              {companyColorsCore.map((swatch) => (
-                <li key={swatch.hex}>
-                  <div
-                    className="aspect-[5/4] w-full"
-                    style={{
-                      backgroundColor: swatch.hex,
-                      boxShadow: "inset 0 0 0 1px rgba(26,32,56,0.06)",
-                    }}
-                    aria-hidden="true"
-                  />
-                  <p className="mt-3 font-serif text-base text-ink">{swatch.name}</p>
-                  <p className="mt-1 font-mono text-[0.7rem] tracking-wide text-ink/40">
-                    {swatch.hex}
-                  </p>
-                  <p className="mt-1 text-sm text-ink/45">{swatch.role}</p>
-                </li>
-              ))}
-            </ul>
+            <div className="mt-14">
+              <p className="font-serif text-[clamp(1.35rem,2.2vw,1.65rem)] text-ink">
+                triplevirgo
+              </p>
+              <p className="mt-3 max-w-lg text-sm leading-[1.75] text-ink/45">
+                Night belongs to the cosmos entry. The living world is dusk —
+                ink darkest, surroundings lifting into mist and pearl. No neon.
+              </p>
+              <ul className="mt-10 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3">
+                {companyColorsCore.map((swatch) => (
+                  <li key={swatch.hex}>
+                    <div
+                      className="aspect-[5/4] w-full"
+                      style={{
+                        backgroundColor: swatch.hex,
+                        boxShadow: "inset 0 0 0 1px rgba(26,32,56,0.06)",
+                      }}
+                      aria-hidden="true"
+                    />
+                    <p className="mt-3 font-serif text-base text-ink">
+                      {swatch.name}
+                    </p>
+                    <p className="mt-1 font-mono text-[0.7rem] tracking-wide text-ink/40">
+                      {swatch.hex}
+                    </p>
+                    <p className="mt-1 text-sm text-ink/45">{swatch.role}</p>
+                  </li>
+                ))}
+              </ul>
 
-            <details className="mt-12 max-w-2xl">
-              <summary className="cursor-pointer text-[0.7rem] uppercase tracking-[0.2em] text-ink/40 transition-colors hover:text-ink/60">
-                Extended dusk tokens
-              </summary>
-              <ul className="mt-8 grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3">
-                {companyColors
-                  .filter(
-                    (swatch) =>
-                      !companyColorsCore.some((core) => core.hex === swatch.hex),
-                  )
-                  .map((swatch) => (
-                    <li key={swatch.hex}>
+              <details className="mt-12 max-w-2xl">
+                <summary className="cursor-pointer text-[0.7rem] uppercase tracking-[0.2em] text-ink/40 transition-colors hover:text-ink/60">
+                  Extended dusk tokens
+                </summary>
+                <ul className="mt-8 grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3">
+                  {companyColors
+                    .filter(
+                      (swatch) =>
+                        !companyColorsCore.some(
+                          (core) => core.hex === swatch.hex,
+                        ),
+                    )
+                    .map((swatch) => (
+                      <li key={swatch.hex}>
+                        <div
+                          className="aspect-[5/4] w-full"
+                          style={{
+                            backgroundColor: swatch.hex,
+                            boxShadow: "inset 0 0 0 1px rgba(26,32,56,0.06)",
+                          }}
+                          aria-hidden="true"
+                        />
+                        <p className="mt-3 font-serif text-base text-ink">
+                          {swatch.name}
+                        </p>
+                        <p className="mt-1 font-mono text-[0.7rem] tracking-wide text-ink/40">
+                          {swatch.hex}
+                        </p>
+                      </li>
+                    ))}
+                </ul>
+              </details>
+            </div>
+
+            {productPalettes.map((palette) => (
+              <div
+                key={palette.id}
+                className="mt-16 border-t border-ink/8 pt-14"
+              >
+                <p className="font-serif text-[clamp(1.35rem,2.2vw,1.65rem)] text-ink">
+                  {palette.label}
+                </p>
+                <p className="mt-3 max-w-lg text-sm leading-[1.75] text-ink/45">
+                  {palette.note}
+                </p>
+                <ul className="mt-10 grid grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-3">
+                  {palette.colors.map((swatch) => (
+                    <li key={`${palette.id}-${swatch.hex}`}>
                       <div
                         className="aspect-[5/4] w-full"
                         style={{
                           backgroundColor: swatch.hex,
-                          boxShadow: "inset 0 0 0 1px rgba(26,32,56,0.06)",
+                          boxShadow: "inset 0 0 0 1px rgba(26,32,56,0.08)",
                         }}
                         aria-hidden="true"
                       />
@@ -675,10 +723,14 @@ export function PressKit() {
                       <p className="mt-1 font-mono text-[0.7rem] tracking-wide text-ink/40">
                         {swatch.hex}
                       </p>
+                      {swatch.role ? (
+                        <p className="mt-1 text-sm text-ink/45">{swatch.role}</p>
+                      ) : null}
                     </li>
                   ))}
-              </ul>
-            </details>
+                </ul>
+              </div>
+            ))}
           </section>
 
           {/* Typography */}
@@ -803,6 +855,27 @@ export function PressKit() {
                 </div>
               ))}
             </div>
+          </section>
+
+          {/* FAQ */}
+          <section aria-labelledby="faq">
+            <SectionHeading id="faq" label="FAQ" title="Quick answers" />
+            <p className="mt-8 max-w-xl text-base leading-[1.9] text-ink/55">
+              Short answers for media and partners. For deeper story, see Founder
+              and the company page.
+            </p>
+            <dl className="mt-14 divide-y divide-ink/8 border-y border-ink/8">
+              {pressFaq.map((item) => (
+                <div key={item.question} className="py-8 md:py-9">
+                  <dt className="font-serif text-xl text-ink md:text-[1.35rem]">
+                    {item.question}
+                  </dt>
+                  <dd className="mt-3 max-w-2xl text-base leading-[1.85] text-ink/55">
+                    {item.answer}
+                  </dd>
+                </div>
+              ))}
+            </dl>
           </section>
 
           {/* Contact */}

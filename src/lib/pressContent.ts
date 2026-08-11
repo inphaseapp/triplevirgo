@@ -12,6 +12,7 @@ export const pressSections = [
   { id: "typography", label: "Typography" },
   { id: "voice", label: "Brand Voice" },
   { id: "downloads", label: "Downloads" },
+  { id: "faq", label: "FAQ" },
   { id: "contact", label: "Contact" },
 ] as const;
 
@@ -115,6 +116,81 @@ export const companyColorsCore = [
   companyColors[7], // Pearl
   companyColors[8], // Rose gold
   companyColors[9], // Warm gold
+] as const;
+
+export type ColorSwatch = {
+  name: string;
+  hex: string;
+  role?: string;
+};
+
+export type ProductPalette = {
+  id: string;
+  label: string;
+  note: string;
+  colors: ColorSwatch[];
+};
+
+/** Product brand palettes — from identity/products and InPhase brand board v1. */
+export const productPalettes: ProductPalette[] = [
+  {
+    id: "myphase",
+    label: "MyPhase",
+    note: "White Moonstone and Rose Quartz — gemstone materials, not metallic finishes.",
+    colors: [
+      { name: "Moonstone pearl", hex: "#F7F3F0", role: "Primary light" },
+      { name: "Soft ivory", hex: "#F0E6E2", role: "Warm ground" },
+      { name: "Rose quartz", hex: "#E7B7BE", role: "Self-love accent" },
+      { name: "Blush", hex: "#F4D8DF", role: "Soft pink" },
+      { name: "Muted taupe", hex: "#9E8E93", role: "Secondary" },
+      { name: "Night plate", hex: "#0E0D10", role: "Dark surfaces" },
+    ],
+  },
+  {
+    id: "inphase",
+    label: "InPhase",
+    note: "Brand board v1 — Cosmic Violet body, Solar Gold glow, Midnight plate.",
+    colors: [
+      { name: "Midnight", hex: "#080D1A", role: "Plate" },
+      { name: "Cosmic Violet", hex: "#7B5CFF", role: "Primary" },
+      { name: "Lunar Lilac", hex: "#B689FF", role: "Secondary" },
+      { name: "Solar Gold", hex: "#FFB86B", role: "Inner glow" },
+      { name: "Moonstone", hex: "#F5F5FA", role: "Light" },
+    ],
+  },
+];
+
+/** From identity/press/faq.md — keep in sync. */
+export const pressFaq = [
+  {
+    question: "What is TripleVirgo?",
+    answer:
+      "TripleVirgo is a technology company that builds thoughtfully designed applications to help people better understand themselves and each other.",
+  },
+  {
+    question: "Why the name TripleVirgo?",
+    answer:
+      "The name comes from the founder’s natal chart — Sun, Rising, and Venus in Virgo — a reminder that curiosity, thoughtful design, and careful observation can become acts of service.",
+  },
+  {
+    question: "What products do you make?",
+    answer:
+      "MyPhase and InPhase are live. OurPhase is coming soon. Reveal is reserved in the brand constellation and is not currently marketed on triplevirgo.com.",
+  },
+  {
+    question: "Are these separate companies?",
+    answer:
+      "No. They are luminous points in a single constellation under the TripleVirgo philosophy.",
+  },
+  {
+    question: "What makes TripleVirgo different?",
+    answer:
+      "We don’t build technology to capture attention. We build technology to cultivate awareness.",
+  },
+  {
+    question: "How can press or partners reach you?",
+    answer: "Email connect@triplevirgo.com.",
+  },
 ] as const;
 
 export const voiceDo = [
