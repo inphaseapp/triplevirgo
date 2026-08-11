@@ -27,13 +27,13 @@ export const companyFacts = {
     "How can technology help us better understand ourselves and each other?",
   mantra: "The background whispers. The details shimmer. The logo sings.",
   boilerplateShort:
-    "TripleVirgo creates thoughtfully designed technology that helps people better understand themselves and each other. Through apps like MyPhase and InPhase, the company builds tools for reflection, relationships, and life’s natural rhythms.",
+    "TripleVirgo creates thoughtfully designed technology that offers people the opportunity to better understand themselves and each other. Through apps like MyPhase and InPhase, the company builds tools for reflection, relationships, and life’s natural rhythms.",
   boilerplateLong:
     "TripleVirgo, LLC is a technology company building applications that cultivate awareness rather than capture attention. Founded on the question “How can technology help us better understand ourselves and each other?”, TripleVirgo develops a constellation of products — including MyPhase and InPhase — designed with presence, compassion, and intention. The company believes deeper understanding creates stronger relationships with ourselves, each other, and the world around us.",
   northStar: [
     "We don’t build technology to capture attention.",
     "We build technology to cultivate awareness.",
-    "Every product we create should leave people feeling more connected to themselves than when they first opened it.",
+    "Every product we create has the power to leave people feeling more connected to themselves than when they first opened it.",
   ],
   mission: [
     "We believe understanding creates compassion.",
@@ -50,22 +50,19 @@ export const companyFacts = {
 } as const;
 
 export const founderCopy = {
-  opening: "Every meaningful company begins with a question.",
-  question:
-    "How can technology help us better understand ourselves and each other?",
   paragraphs: [
     "TripleVirgo was born from the idea that deeper understanding creates stronger relationships — with ourselves, with each other, and with the world around us.",
-    "The name comes from our founder’s natal chart — Sun, Rising, and Venus in Virgo — a reminder that curiosity, thoughtful design, and careful observation can become acts of service.",
-    "Today, TripleVirgo builds technology that helps people better understand themselves and one another.",
+    "The name comes from our founder Jeane Divine’s natal chart — Sun, Rising, and Venus in Virgo — a reminder that curiosity, thoughtful design, and careful observation can become acts of service.",
+    "Today, TripleVirgo builds technology that inspires people to better understand themselves and one another.",
   ],
-  storyPath: "/triplevirgo",
+  portraitNote: "Founder portrait soon.",
 } as const;
 
 export const products = [
   {
     name: "MyPhase",
     role: "Understanding yourself",
-    lead: "Personal guidance for every phase of your cycle.",
+    lead: "Personal guidance for women.",
     description:
       "Understand your body’s natural rhythm and honor what each phase is asking of you.",
     href: "https://myphaseapp.com",
@@ -73,7 +70,7 @@ export const products = [
   },
   {
     name: "InPhase",
-    role: "Understanding relationships",
+    role: "Understanding the woman you love",
     lead: "Relationship guidance for men.",
     description:
       "Better understand her rhythm so you can show up with greater connection and confidence.",
@@ -165,12 +162,12 @@ export const pressFaq = [
   {
     question: "What is TripleVirgo?",
     answer:
-      "TripleVirgo is a technology company that builds thoughtfully designed applications to help people better understand themselves and each other.",
+      "TripleVirgo is a technology company creating thoughtfully designed applications that help people better understand themselves and one another. We believe deeper understanding leads to stronger relationships—with ourselves, each other, and the world around us.",
   },
   {
     question: "Why the name TripleVirgo?",
     answer:
-      "The name comes from the founder’s natal chart — Sun, Rising, and Venus in Virgo — a reminder that curiosity, thoughtful design, and careful observation can become acts of service.",
+      "The name comes from our founder Jeane Divine’s natal chart — Sun, Rising, and Venus in Virgo — a reminder that curiosity, thoughtful design, and careful observation can become acts of service.",
   },
   {
     question: "What products do you make?",
@@ -193,19 +190,15 @@ export const pressFaq = [
   },
 ] as const;
 
-export const voiceDo = [
-  "Thoughtful, present, compassionate",
-  "Clarity and intention",
-  "Reflection, curiosity, wisdom",
-  "Inspire — not prescribe",
+/** Character of the voice — not a prefer/avoid checklist. */
+export const voiceCharacter = [
+  "Thoughtful, present, and compassionate — clarity with intention.",
+  "Curiosity and quiet wisdom over urgency or noise.",
+  "We inspire understanding; we don’t prescribe or sell FOMO.",
 ] as const;
 
-export const voiceDont = [
-  "Hype, urgency, FOMO",
-  "Cluttered claims or feature laundry lists",
-  "Distraction, judgment, noise",
-  "Transactional or generic suggestion tone",
-] as const;
+export const voiceLeaveBehind =
+  "hype, cluttered claims, judgment, and transactional suggestion tone.";
 
 export const typography = {
   serif: {
@@ -244,10 +237,10 @@ export const downloadGroups: DownloadGroup[] = [
   {
     id: "triplevirgo",
     label: "triplevirgo",
-    note: "Company mark — do not redraw or use as a watermark.",
+    note: "Company mark — sacred geometry for press and partnership.",
     items: [
       {
-        name: "Brand kit ZIP",
+        name: "Brand kit",
         description: "Master lockup, sacred mark, transparent, and press sizes.",
         href: "/brand/triplevirgo/triplevirgo-brand-kit.zip",
         filename: "triplevirgo-brand-kit.zip",
@@ -282,10 +275,10 @@ export const downloadGroups: DownloadGroup[] = [
   {
     id: "myphase",
     label: "MyPhase",
-    note: "Gemstone crescents — do not recolor or separate the moons.",
+    note: "Moonstone and rose quartz crescents — kept whole, as gemstones.",
     items: [
       {
-        name: "Brand kit ZIP",
+        name: "Brand kit",
         description: "Emblem, lockups, avatar, and brand presentation.",
         href: "/brand/myphase/myphase-brand-kit.zip",
         filename: "myphase-brand-kit.zip",
@@ -311,7 +304,7 @@ export const downloadGroups: DownloadGroup[] = [
       },
       {
         name: "Brand presentation",
-        description: "Materials, palette, and approved treatments.",
+        description: "Materials, palette, and treatments.",
         href: "/brand/myphase/brand-presentation.png",
         filename: "MyPhase_Brand_Presentation_MASTER.png",
       },
@@ -320,39 +313,45 @@ export const downloadGroups: DownloadGroup[] = [
   {
     id: "inphase",
     label: "InPhase",
-    note: "Hero assets are the Final app icon and Brand Board v1. Additional v0.9 size sets are in the ZIP.",
+    note: "Symbol master for now — wordmark lockup forthcoming.",
     items: [
       {
-        name: "Brand kit ZIP",
+        name: "Brand kit",
         description:
-          "Final icon, Brand Board v1, app icons, favicons, and wallpapers.",
+          "Final icon, transparent symbol, Midnight plate, Brand Board v1, app icons, favicons, and social.",
         href: "/brand/inphase/inphase-brand-kit.zip",
         filename: "inphase-brand-kit.zip",
         primary: true,
       },
       {
         name: "App icon (Final)",
-        description: "Official 1024×1024 — Cosmic Violet & Solar Gold.",
+        description: "1024×1024 master — Cosmic Violet & Solar Gold.",
         href: "/brand/inphase/app-icon-1024.png",
         filename: "InPhase_App_Icon_1024_Final.png",
+      },
+      {
+        name: "Symbol (transparent)",
+        description: "Plate removed — for flexible layouts.",
+        href: "/brand/inphase/symbol-transparent.png",
+        filename: "InPhase_Symbol_Transparent.png",
+      },
+      {
+        name: "Symbol on Midnight",
+        description: "Mark centered on brand Midnight (#080D1A).",
+        href: "/brand/inphase/symbol-midnight.png",
+        filename: "InPhase_Symbol_Midnight.png",
+      },
+      {
+        name: "Open Graph",
+        description: "1200×630 social share from the Final mark.",
+        href: "/brand/inphase/social/OpenGraph.png",
+        filename: "InPhase_OpenGraph.png",
       },
       {
         name: "Brand board v1",
         description: "Identity sheet — palette, type, lockups, usage.",
         href: "/brand/inphase/brand-board.png",
         filename: "InPhase_Brand_Board_v1.png",
-      },
-      {
-        name: "App logo",
-        description: "Square logo export for press.",
-        href: "/brand/inphase/app-logo.jpg",
-        filename: "InPhase_App_LOGO.jpg",
-      },
-      {
-        name: "Wallpaper — desktop",
-        description: "Desktop wallpaper from the asset pack.",
-        href: "/brand/inphase/wallpapers/Desktop.png",
-        filename: "InPhase_Wallpaper_Desktop.png",
       },
     ],
   },

@@ -79,14 +79,29 @@ Dual luminous crescents — Cosmic Violet body, Solar Gold inner glow, Midnight 
 
 ## Site copies
 
-Curated under `public/brand/inphase/`: Final app icon, Brand Board v1, sized app icons, favicons, wallpapers, and `inphase-brand-kit.zip`. Brand Resources heroes are **Final** (`app-icon-1024.png`) and **Brand Board v1** (`brand-board.png`).
+Curated under `public/brand/inphase/`:
 
-### v0.9 placeholder note
+| File | Source |
+|------|--------|
+| `app-icon-1024.png` | Final app icon master (HQ PNG of the official mark) |
+| `symbol-transparent.png` | Derived — black plate knocked out |
+| `symbol-midnight.png` | Derived — mark on Midnight `#080D1A` |
+| `social/*` | Derived — OG 1200×630 + square social plates |
+| `app-icons/`, `favicons/` | Derived size sets from Final |
+| `brand-board.png` | Brand Board v1 identity sheet |
+| `inphase-brand-kit.zip` | Pack of the above |
 
-Several v0.9 “variants” (master, transparent, lockups, social, pack 1024, press BrandBoard/Hero) are **byte-identical** working plates — not distinct exports. They remain in this archive for provenance. They are **not** served on Brand Resources or listed as separate downloads until real differentiated files exist.
+Brand Resources heroes: **Final**, **transparent**, **Brand Board v1**.
+
+There is **no approved wordmark lockup** yet — do not invent text treatments from this mark alone.
+
+### v0.9 archive note
+
+Several v0.9 “variants” under `01_Master` / `03_Logo_Variations` / `06_Social` / `08_Press` were byte-identical working plates. Kept here for provenance only — not served as distinct downloads. Prefer the derived transparent/social files above.
 
 ## Usage
 
 - Do not stretch, rotate, recolor, or redraw the crescents
-- Prefer Final app icon for product surfaces; Brand Board for identity reference
-- Do not treat v0.9 placeholder plates as approved lockup/social variants
+- Prefer Final app icon for product surfaces; transparent for flexible layouts
+- Brand Board for palette / type / usage reference
+- Wordmark lockups: forthcoming when designed

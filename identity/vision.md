@@ -11,7 +11,7 @@ A world where technology deepens self-awareness, strengthens relationships, and 
 We don’t build technology to capture attention.  
 We build technology to cultivate awareness.
 
-Every product we create should leave people feeling more connected to themselves than when they first opened it.
+Every product we create has the power to leave people feeling more connected to themselves than when they first opened it.
 
 ## Platform future vision (Phase products)
 

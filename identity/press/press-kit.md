@@ -18,7 +18,7 @@ A central resource for media, partners, designers, developers, and collaborators
 
 ## Boilerplate (short)
 
-TripleVirgo creates thoughtfully designed technology that helps people better understand themselves and each other. Through apps like MyPhase and InPhase, the company builds tools for reflection, relationships, and life’s natural rhythms.
+TripleVirgo creates thoughtfully designed technology that offers people the opportunity to better understand themselves and each other. Through apps like MyPhase and InPhase, the company builds tools for reflection, relationships, and life’s natural rhythms.
 
 ## Boilerplate (long)
 

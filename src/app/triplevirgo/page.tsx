@@ -81,7 +81,7 @@ export default function TripleVirgoStoryPage() {
               className="animate-fade-rise"
               style={{ animationDelay: "0.95s" }}
             >
-              The name comes from our founder&apos;s natal chart—
+              The name comes from our founder Jeane Divine&apos;s natal chart—
               <strong className="font-medium text-ink/80">
                 Sun, Rising, and Venus in Virgo
               </strong>
@@ -120,8 +120,8 @@ export default function TripleVirgoStoryPage() {
               <p>We don&apos;t build technology to capture attention.</p>
               <p>We build technology to cultivate awareness.</p>
               <p>
-                Every product we create should leave people feeling more
-                connected to themselves than when they first opened it.
+                Every product we create has the power to leave people feeling
+                more connected to themselves than when they first opened it.
               </p>
             </div>
           </section>

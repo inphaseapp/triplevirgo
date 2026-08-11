@@ -103,7 +103,7 @@ No additional hero marketing copy beyond this stack.
 
 | Product | Lead | Description | CTA / link |
 |---------|------|-------------|------------|
-| MyPhase | Personal guidance for every phase of your cycle. | Understand your body’s natural rhythm and honor what each phase is asking of you. | Explore MyPhase → https://myphaseapp.com |
+| MyPhase | Personal guidance for women. | Understand your body’s natural rhythm and honor what each phase is asking of you. | Explore MyPhase → https://myphaseapp.com |
 | InPhase | Relationship guidance for men. | Better understand her rhythm so you can show up with greater connection and confidence. | Explore InPhase → https://inphaseapp.com |
 | OurPhase | Shared guidance for every relationship. | Helping two people better understand each other. | Coming Soon *(no “coming soon” inside the description sentence)* |
 

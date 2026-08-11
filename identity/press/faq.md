@@ -2,11 +2,11 @@
 
 ### What is TripleVirgo?
 
-TripleVirgo is a technology company that builds thoughtfully designed applications to help people better understand themselves and each other.
+TripleVirgo is a technology company creating thoughtfully designed applications that help people better understand themselves and one another. We believe deeper understanding leads to stronger relationships—with ourselves, each other, and the world around us.
 
 ### Why the name TripleVirgo?
 
-The name comes from the founder’s natal chart — Sun, Rising, and Venus in Virgo — a reminder that curiosity, thoughtful design, and careful observation can become acts of service.
+The name comes from our founder Jeane Divine’s natal chart — Sun, Rising, and Venus in Virgo — a reminder that curiosity, thoughtful design, and careful observation can become acts of service.
 
 ### What products do you make?
 

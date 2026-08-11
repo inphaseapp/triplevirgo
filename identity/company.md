@@ -12,7 +12,7 @@ Canonical company document. Supporting detail lives in sibling files; product sp
 | Copyright line | © 2026 TripleVirgo, LLC |
 | Apple Developer / org naming intent | triplevirgo llc (rename target from personal account) |
 
-**Reasoning (name story):** The name comes from the founder’s natal chart — Sun, Rising, and Venus in Virgo — a reminder that curiosity, thoughtful design, and careful observation can become acts of service. Full narrative: [`founder.md`](./founder.md) and live page `/triplevirgo`.
+**Reasoning (name story):** The name comes from our founder Jeane Divine’s natal chart — Sun, Rising, and Venus in Virgo — a reminder that curiosity, thoughtful design, and careful observation can become acts of service. Full narrative: [`founder.md`](./founder.md) and live page `/triplevirgo`.
 
 ## What the company is
 
@@ -20,7 +20,7 @@ TripleVirgo is the **company** behind the products — not an app landing page. 
 
 **One-line / lockup tagline:** Building technology that inspires understanding.
 
-**Company site SEO description (live):** TripleVirgo creates thoughtfully designed technology that helps people better understand themselves and each other.
+**Company site SEO description (live):** TripleVirgo creates thoughtfully designed technology that offers people the opportunity to better understand themselves and each other.
 
 ## Core question
 
@@ -66,7 +66,7 @@ Details: [`logos/triplevirgo/README.md`](./logos/triplevirgo/README.md).
 | Product | Role (company site framing) | Domain |
 |---------|----------------------------|--------|
 | **MyPhase** | Understanding yourself | https://myphaseapp.com |
-| **InPhase** | Understanding relationships | https://inphaseapp.com |
+| **InPhase** | Understanding the woman you love | https://inphaseapp.com |
 | **OurPhase** | Understanding each other | Coming soon on company site; platform domain https://ourphase.app |
 | **Reveal** | Reserved in identity system | Not on public company site until explicitly included |
 

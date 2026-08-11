@@ -7,7 +7,7 @@ import { VirgoConstellation } from "./VirgoConstellation";
 const stars = [
   {
     name: "MyPhase",
-    lead: "Personal guidance for every phase of your cycle.",
+    lead: "Personal guidance for women.",
     description:
       "Understand your body’s natural rhythm and honor what each phase is asking of you.",
     cta: "Explore MyPhase",

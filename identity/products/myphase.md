@@ -27,7 +27,7 @@ Feature focus (platform): Self-awareness · Personal rhythm · Emotional pattern
 
 | Element | Copy |
 |---------|------|
-| Lead | Personal guidance for every phase of your cycle. |
+| Lead | Personal guidance for women. |
 | Description | Understand your body’s natural rhythm and honor what each phase is asking of you. |
 | CTA | Explore MyPhase |
 

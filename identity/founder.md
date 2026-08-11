@@ -14,9 +14,9 @@ For us, it was this:
 
 TripleVirgo was born from the idea that deeper understanding creates stronger relationships — with ourselves, with each other, and with the world around us.
 
-The name comes from our founder’s natal chart — **Sun, Rising, and Venus in Virgo** — a reminder that curiosity, thoughtful design, and careful observation can become acts of service.
+The name comes from our founder Jeane Divine’s natal chart — **Sun, Rising, and Venus in Virgo** — a reminder that curiosity, thoughtful design, and careful observation can become acts of service.
 
-Today, TripleVirgo builds technology that helps people better understand themselves and one another.
+Today, TripleVirgo builds technology that inspires people to better understand themselves and one another.
 
 ---
 

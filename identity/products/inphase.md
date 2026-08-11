@@ -8,7 +8,7 @@ Canonical product identity.
 |-------|--------|
 | Status | Live |
 | Product site | https://inphaseapp.com |
-| Company constellation | Yes — Understanding relationships |
+| Company constellation | Yes — Understanding the woman you love |
 | Legal | TripleVirgo, LLC |
 | Bundle ID | `com.triplevirgo.inphase` |
 | App Store name | InPhase |

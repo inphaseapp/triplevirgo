@@ -17,7 +17,7 @@ const sans = Outfit({
 });
 
 const siteDescription =
-  "TripleVirgo creates thoughtfully designed technology that helps people better understand themselves and each other.";
+  "TripleVirgo creates thoughtfully designed technology that offers people the opportunity to better understand themselves and each other.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://triplevirgo.com"),
