@@ -30,7 +30,7 @@ Legacy companions in `public/brand/`: `triplevirgo-mark.jpg`, `logo.svg`, `tripl
 | Product | Folder | Notes |
 |---------|--------|-------|
 | MyPhase | `myphase/` | Full pack — [`myphase/README.md`](./myphase/README.md). Site: `public/brand/myphase/` |
-| InPhase | `inphase/` | Brand board v1 + app icon master — [`inphase/README.md`](./inphase/README.md). Site: `public/brand/inphase/` |
+| InPhase | `inphase/` | Brand Assets v0.9 + Brand Board v1 — [`inphase/README.md`](./inphase/README.md). Site: `public/brand/inphase/` |
 | OurPhase | `ourphase/` | Official mark TBD |
 | Reveal | `reveal/` | Official mark TBD |
 

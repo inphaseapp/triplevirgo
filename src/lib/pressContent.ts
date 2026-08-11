@@ -107,6 +107,16 @@ export const companyColors = [
   { name: "Silver", hex: "#8A90A8", role: "Muted metal" },
 ] as const;
 
+/** Core six for primary display; rest remain in companyColors for extended use. */
+export const companyColorsCore = [
+  companyColors[0], // Ink
+  companyColors[2], // Dusk deep
+  companyColors[5], // Dusk mist
+  companyColors[7], // Pearl
+  companyColors[8], // Rose gold
+  companyColors[9], // Warm gold
+] as const;
+
 export const voiceDo = [
   "Thoughtful, present, compassionate",
   "Clarity and intention",
@@ -138,128 +148,136 @@ export const typography = {
 export type PressDownload = {
   name: string;
   description: string;
-  href?: string;
-  filename?: string;
-  available: boolean;
+  href: string;
+  filename: string;
+  primary?: boolean;
 };
 
-export const downloads: PressDownload[] = [
+export type DownloadGroup = {
+  id: string;
+  label: string;
+  note?: string;
+  items: PressDownload[];
+};
+
+/**
+ * Curated downloads only — distinct files.
+ * InPhase v0.9 “variations” that were byte-identical are excluded until real exports exist.
+ */
+export const downloadGroups: DownloadGroup[] = [
   {
-    name: "triplevirgo master lockup",
-    description:
-      "Approved full logo — sacred geometry, wordmark, and tagline. Source of truth.",
-    href: "/brand/triplevirgo/logo-master.jpg",
-    filename: "TripleVirgo_Logo_MASTER.jpg",
-    available: true,
+    id: "triplevirgo",
+    label: "triplevirgo",
+    note: "Company mark — do not redraw or use as a watermark.",
+    items: [
+      {
+        name: "Brand kit ZIP",
+        description: "Master lockup, sacred mark, transparent, and press sizes.",
+        href: "/brand/triplevirgo/triplevirgo-brand-kit.zip",
+        filename: "triplevirgo-brand-kit.zip",
+        primary: true,
+      },
+      {
+        name: "Master lockup",
+        description: "Full logo — sacred geometry, wordmark, tagline.",
+        href: "/brand/triplevirgo/logo-master.jpg",
+        filename: "TripleVirgo_Logo_MASTER.jpg",
+      },
+      {
+        name: "Sacred mark (transparent)",
+        description: "Mark only — avatars, favicons, small uses.",
+        href: "/brand/triplevirgo/sacred-mark-transparent.png",
+        filename: "TripleVirgo_SacredMark_Transparent.png",
+      },
+      {
+        name: "Full logo (transparent)",
+        description: "Background-removed full logo.",
+        href: "/brand/triplevirgo/full-logo-transparent.png",
+        filename: "TripleVirgo_FullLogo_Transparent.png",
+      },
+      {
+        name: "Press 3000px",
+        description: "High-resolution navy full logo.",
+        href: "/brand/triplevirgo/full-logo-navy-3000.png",
+        filename: "TripleVirgo_FullLogo_Navy_3000px.png",
+      },
+    ],
   },
   {
-    name: "triplevirgo full logo (transparent)",
-    description: "Background-removed full logo for flexible layouts.",
-    href: "/brand/triplevirgo/full-logo-transparent.png",
-    filename: "TripleVirgo_FullLogo_Transparent.png",
-    available: true,
+    id: "myphase",
+    label: "MyPhase",
+    note: "Gemstone crescents — do not recolor or separate the moons.",
+    items: [
+      {
+        name: "Brand kit ZIP",
+        description: "Emblem, lockups, avatar, and brand presentation.",
+        href: "/brand/myphase/myphase-brand-kit.zip",
+        filename: "myphase-brand-kit.zip",
+        primary: true,
+      },
+      {
+        name: "Emblem (master)",
+        description: "Standalone gemstone crescents.",
+        href: "/brand/myphase/emblem-master.png",
+        filename: "MyPhase_Emblem_MASTER.png",
+      },
+      {
+        name: "Lockup — dark",
+        description: "Wordmark + tagline on charcoal.",
+        href: "/brand/myphase/lockup-dark.png",
+        filename: "MyPhase_Logo_Lockup_Dark.png",
+      },
+      {
+        name: "Lockup — light",
+        description: "Wordmark + tagline on pearl.",
+        href: "/brand/myphase/lockup-light.png",
+        filename: "MyPhase_Logo_Lockup_Light.png",
+      },
+      {
+        name: "Brand presentation",
+        description: "Materials, palette, and approved treatments.",
+        href: "/brand/myphase/brand-presentation.png",
+        filename: "MyPhase_Brand_Presentation_MASTER.png",
+      },
+    ],
   },
   {
-    name: "triplevirgo sacred mark (transparent)",
-    description: "Mark only — for avatars, favicons, and small uses.",
-    href: "/brand/triplevirgo/sacred-mark-transparent.png",
-    filename: "TripleVirgo_SacredMark_Transparent.png",
-    available: true,
-  },
-  {
-    name: "triplevirgo full logo — press 3000px",
-    description: "High-resolution navy full logo for print and press.",
-    href: "/brand/triplevirgo/full-logo-navy-3000.png",
-    filename: "TripleVirgo_FullLogo_Navy_3000px.png",
-    available: true,
-  },
-  {
-    name: "triplevirgo sacred mark — navy 1024",
-    description: "Square sacred mark on navy for web and social.",
-    href: "/brand/triplevirgo/sacred-mark-navy-1024.png",
-    filename: "TripleVirgo_SacredMark_Navy_1024x1024.png",
-    available: true,
-  },
-  {
-    name: "Full press kit ZIP",
-    description: "Complete company + product package — forthcoming.",
-    available: false,
-  },
-  {
-    name: "MyPhase emblem (master)",
-    description: "Standalone gemstone crescents — visual source of truth.",
-    href: "/brand/myphase/emblem-master.png",
-    filename: "MyPhase_Emblem_MASTER.png",
-    available: true,
-  },
-  {
-    name: "MyPhase emblem (transparent)",
-    description: "Transparent crescent mark for flexible layouts.",
-    href: "/brand/myphase/emblem-transparent.png",
-    filename: "MyPhase_Emblem_Transparent_MASTER.png",
-    available: true,
-  },
-  {
-    name: "MyPhase lockup — dark",
-    description:
-      "Wordmark + “Know yourself. Love yourself.” on charcoal.",
-    href: "/brand/myphase/lockup-dark.png",
-    filename: "MyPhase_Logo_Lockup_Dark.png",
-    available: true,
-  },
-  {
-    name: "MyPhase lockup — light",
-    description:
-      "Wordmark + tagline on pearl — for light surfaces.",
-    href: "/brand/myphase/lockup-light.png",
-    filename: "MyPhase_Logo_Lockup_Light.png",
-    available: true,
-  },
-  {
-    name: "MyPhase avatar (charcoal)",
-    description: "1024×1024 square emblem on charcoal for social / app use.",
-    href: "/brand/myphase/avatar-charcoal-1024.png",
-    filename: "MyPhase_Avatar_Charcoal_1024x1024.png",
-    available: true,
-  },
-  {
-    name: "MyPhase brand presentation",
-    description: "Approved materials, palette, and lockup treatments.",
-    href: "/brand/myphase/brand-presentation.png",
-    filename: "MyPhase_Brand_Presentation_MASTER.png",
-    available: true,
-  },
-  {
-    name: "InPhase app icon",
-    description:
-      "Official 1024×1024 mark — Cosmic Violet crescents, Solar Gold glow.",
-    href: "/brand/inphase/app-icon-1024.png",
-    filename: "InPhase_App_Icon_1024_Final.png",
-    available: true,
-  },
-  {
-    name: "InPhase app logo",
-    description: "Square logo export for press and partners.",
-    href: "/brand/inphase/app-logo.jpg",
-    filename: "InPhase_App_LOGO.jpg",
-    available: true,
-  },
-  {
-    name: "InPhase brand board v1",
-    description:
-      "Full identity sheet — palette, typography, lockups, and usage.",
-    href: "/brand/inphase/brand-board.png",
-    filename: "InPhase_Brand_Board_v1.png",
-    available: true,
-  },
-  {
-    name: "OurPhase mark",
-    description: "Official mark when the product launches.",
-    available: false,
-  },
-  {
-    name: "Color palette board",
-    description: "Printable dusk & accent swatches.",
-    available: false,
+    id: "inphase",
+    label: "InPhase",
+    note: "Hero assets are the Final app icon and Brand Board v1. Additional v0.9 size sets are in the ZIP.",
+    items: [
+      {
+        name: "Brand kit ZIP",
+        description:
+          "Final icon, Brand Board v1, app icons, favicons, and wallpapers.",
+        href: "/brand/inphase/inphase-brand-kit.zip",
+        filename: "inphase-brand-kit.zip",
+        primary: true,
+      },
+      {
+        name: "App icon (Final)",
+        description: "Official 1024×1024 — Cosmic Violet & Solar Gold.",
+        href: "/brand/inphase/app-icon-1024.png",
+        filename: "InPhase_App_Icon_1024_Final.png",
+      },
+      {
+        name: "Brand board v1",
+        description: "Identity sheet — palette, type, lockups, usage.",
+        href: "/brand/inphase/brand-board.png",
+        filename: "InPhase_Brand_Board_v1.png",
+      },
+      {
+        name: "App logo",
+        description: "Square logo export for press.",
+        href: "/brand/inphase/app-logo.jpg",
+        filename: "InPhase_App_LOGO.jpg",
+      },
+      {
+        name: "Wallpaper — desktop",
+        description: "Desktop wallpaper from the asset pack.",
+        href: "/brand/inphase/wallpapers/Desktop.png",
+        filename: "InPhase_Wallpaper_Desktop.png",
+      },
+    ],
   },
 ];

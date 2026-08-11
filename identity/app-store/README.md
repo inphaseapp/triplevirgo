@@ -28,7 +28,10 @@ Full brand pack: `identity/logos/myphase/`. App icon / avatar: `04_Web_Social/My
 | Support email | connect@inphaseapp.com |
 | Full draft | `inphase-master/inphase/docs/APP_STORE_CONNECT.md` |
 
-Official app icon: `identity/logos/inphase/01_Master/InPhase_App_Icon_1024_Final.png`. Brand board: `06_Brand_Reference/InPhase_Brand_Board_v1.png`. Drop screenshots into `identity/app-store/inphase/` when packaging.
+Full pack: `identity/logos/inphase/` (Brand Assets v0.9 + Brand Board v1).  
+App icons: `04_App_Icons/` · Final: `01_Master/InPhase_App_Icon_1024_Final.png`.  
+Brand board: `06_Brand_Reference/InPhase_Brand_Board_v1.png`.  
+Drop App Store screenshots into `identity/app-store/inphase/` when packaging.
 
 ## OurPhase
 

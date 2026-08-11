@@ -3,9 +3,10 @@ import Link from "next/link";
 import { Logo } from "./Logo";
 import {
   companyColors,
+  companyColorsCore,
   companyFacts,
   constellationIntro,
-  downloads,
+  downloadGroups,
   founderCopy,
   pressSections,
   products,
@@ -475,14 +476,15 @@ export function PressKit() {
               </ul>
             </div>
 
-            {/* InPhase pack previews */}
+            {/* InPhase — curated heroes only (v0.9 placeholder variants excluded) */}
             <div className="mt-16 border-t border-ink/8 pt-14">
-              <p className="section-label">InPhase pack</p>
+              <p className="section-label">InPhase</p>
               <p className="mt-4 max-w-xl text-base leading-[1.85] text-ink/55">
-                Brand board v1.0 — eclipse mark, Cosmic Violet & Solar Gold system,
-                lockups, and usage. Do not stretch, rotate, or recolor the crescents.
+                Official heroes: Final app icon and Brand Board v1. Do not stretch,
+                rotate, or recolor the crescents. Sized icons and wallpapers are in the
+                brand kit ZIP.
               </p>
-              <ul className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              <ul className="mt-10 grid gap-8 sm:grid-cols-2">
                 <li>
                   <div
                     className="relative flex aspect-[4/3] items-center justify-center overflow-hidden"
@@ -493,7 +495,7 @@ export function PressKit() {
                   >
                     <Image
                       src="/brand/inphase/app-icon-1024.png"
-                      alt="InPhase app icon"
+                      alt="InPhase app icon Final"
                       width={512}
                       height={512}
                       className="h-[72%] w-[72%] object-contain"
@@ -501,29 +503,10 @@ export function PressKit() {
                   </div>
                   <p className="mt-4 font-serif text-base text-ink">App icon</p>
                   <p className="mt-1 text-sm text-ink/45">
-                    1024 master — violet & solar gold
+                    1024 Final — Cosmic Violet & Solar Gold
                   </p>
                 </li>
                 <li>
-                  <div
-                    className="relative flex aspect-[4/3] items-center justify-center overflow-hidden px-6"
-                    style={{
-                      background: "#080D1A",
-                      border: "1px solid rgba(247, 243, 238, 0.1)",
-                    }}
-                  >
-                    <Image
-                      src="/brand/inphase/app-logo.jpg"
-                      alt="InPhase app logo"
-                      width={512}
-                      height={512}
-                      className="h-[78%] w-[78%] object-contain"
-                    />
-                  </div>
-                  <p className="mt-4 font-serif text-base text-ink">App logo</p>
-                  <p className="mt-1 text-sm text-ink/45">Square logo export</p>
-                </li>
-                <li className="sm:col-span-2 lg:col-span-1">
                   <div
                     className="relative flex aspect-[4/3] items-center justify-center overflow-hidden"
                     style={{
@@ -626,6 +609,10 @@ export function PressKit() {
             <ul className="mt-12 max-w-xl space-y-3 text-sm leading-[1.8] text-ink/50">
               <li>Use the provided official asset — do not reinterpret the geometry.</li>
               <li>Give the mark room to breathe. It is an identity mark, not decoration.</li>
+              <li>
+                Never use the company mark as a watermark, and do not move the luminous
+                stars.
+              </li>
               <li>Brand as lowercase <span className="text-ink/70">triplevirgo</span> in wordmarks.</li>
               <li>
                 MyPhase: prefer transparent emblem for flexible layouts; lockups when
@@ -642,8 +629,8 @@ export function PressKit() {
               ink darkest, surroundings lifting into mist and pearl. No neon.
             </p>
 
-            <ul className="mt-14 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 md:grid-cols-4">
-              {companyColors.map((swatch) => (
+            <ul className="mt-14 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3">
+              {companyColorsCore.map((swatch) => (
                 <li key={swatch.hex}>
                   <div
                     className="aspect-[5/4] w-full"
@@ -661,6 +648,37 @@ export function PressKit() {
                 </li>
               ))}
             </ul>
+
+            <details className="mt-12 max-w-2xl">
+              <summary className="cursor-pointer text-[0.7rem] uppercase tracking-[0.2em] text-ink/40 transition-colors hover:text-ink/60">
+                Extended dusk tokens
+              </summary>
+              <ul className="mt-8 grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3">
+                {companyColors
+                  .filter(
+                    (swatch) =>
+                      !companyColorsCore.some((core) => core.hex === swatch.hex),
+                  )
+                  .map((swatch) => (
+                    <li key={swatch.hex}>
+                      <div
+                        className="aspect-[5/4] w-full"
+                        style={{
+                          backgroundColor: swatch.hex,
+                          boxShadow: "inset 0 0 0 1px rgba(26,32,56,0.06)",
+                        }}
+                        aria-hidden="true"
+                      />
+                      <p className="mt-3 font-serif text-base text-ink">
+                        {swatch.name}
+                      </p>
+                      <p className="mt-1 font-mono text-[0.7rem] tracking-wide text-ink/40">
+                        {swatch.hex}
+                      </p>
+                    </li>
+                  ))}
+              </ul>
+            </details>
           </section>
 
           {/* Typography */}
@@ -732,40 +750,59 @@ export function PressKit() {
 
           {/* Downloads */}
           <section aria-labelledby="downloads">
-            <SectionHeading id="downloads" label="Downloads" title="Assets" />
+            <SectionHeading id="downloads" label="Downloads" title="Brand kits" />
             <p className="mt-8 max-w-xl text-base leading-[1.9] text-ink/55">
-              Available files can be downloaded now. Placeholders mark packages still
-              being prepared for the full press archive.
+              Start with a brand kit ZIP, then grab individual masters as needed.
+              OurPhase assets will appear here when the mark is ready.
             </p>
 
-            <ul className="mt-14 divide-y divide-ink/8 border-y border-ink/8">
-              {downloads.map((item) => (
-                <li
-                  key={item.name}
-                  className="flex flex-col gap-4 py-8 sm:flex-row sm:items-center sm:justify-between sm:gap-10"
-                >
-                  <div className="max-w-lg">
-                    <p className="font-serif text-xl text-ink">{item.name}</p>
-                    <p className="mt-2 text-sm leading-[1.75] text-ink/50">
-                      {item.description}
+            <div className="mt-14 space-y-16">
+              {downloadGroups.map((group) => (
+                <div key={group.id} className="border-t border-ink/8 pt-10">
+                  <p className="font-serif text-[clamp(1.5rem,2.5vw,1.85rem)] text-ink">
+                    {group.label}
+                  </p>
+                  {group.note ? (
+                    <p className="mt-3 max-w-lg text-sm leading-[1.75] text-ink/45">
+                      {group.note}
                     </p>
-                  </div>
-                  {item.available && item.href ? (
-                    <a
-                      href={item.href}
-                      download={item.filename}
-                      className="btn-ghost shrink-0 self-start sm:self-center"
-                    >
-                      Download
-                    </a>
-                  ) : (
-                    <span className="shrink-0 self-start text-[0.65rem] uppercase tracking-[0.2em] text-ink/30 sm:self-center">
-                      Forthcoming
-                    </span>
-                  )}
-                </li>
+                  ) : null}
+                  <ul className="mt-8 divide-y divide-ink/8 border-y border-ink/8">
+                    {group.items.map((item) => (
+                      <li
+                        key={item.href}
+                        className="flex flex-col gap-4 py-7 sm:flex-row sm:items-center sm:justify-between sm:gap-10"
+                      >
+                        <div className="max-w-lg">
+                          <p className="font-serif text-lg text-ink md:text-xl">
+                            {item.name}
+                            {item.primary ? (
+                              <span className="ml-3 align-middle text-[0.6rem] uppercase tracking-[0.18em] text-ink/35">
+                                Recommended
+                              </span>
+                            ) : null}
+                          </p>
+                          <p className="mt-2 text-sm leading-[1.75] text-ink/50">
+                            {item.description}
+                          </p>
+                        </div>
+                        <a
+                          href={item.href}
+                          download={item.filename}
+                          className={
+                            item.primary
+                              ? "btn-primary shrink-0 self-start sm:self-center"
+                              : "btn-ghost shrink-0 self-start sm:self-center"
+                          }
+                        >
+                          Download
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
-            </ul>
+            </div>
           </section>
 
           {/* Contact */}

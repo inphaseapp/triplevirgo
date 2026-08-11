@@ -119,12 +119,14 @@ Source: `docs/constitution/design-system.md`
 
 ### Logo & brand board
 
-**Brand board v1:** `identity/logos/inphase/06_Brand_Reference/InPhase_Brand_Board_v1.png` · site: `/brand/inphase/brand-board.png`
+**Brand Assets v0.9** (working master package): folders `01_Master` … `11_Source_Artwork` under `identity/logos/inphase/` — see [`../logos/inphase/README.md`](../logos/inphase/README.md).
 
-Documents lockups (primary / horizontal / stacked), colorways, clear space, incorrect usage, app icon sizes, and asset checklist.
+**Brand board v1** (full identity sheet): `06_Brand_Reference/InPhase_Brand_Board_v1.png` · site: `/brand/inphase/brand-board.png`
 
-**Official app icon:** dual symmetrical crescents — Cosmic Violet body, Solar Gold inner glow, Midnight plate.  
-Master: `identity/logos/inphase/01_Master/InPhase_App_Icon_1024_Final.png` · site: `/brand/inphase/app-icon-1024.png`
+**Working master logo (v0.9):** `01_Master/InPhase_Master_Logo.png` · site: `/brand/inphase/master-logo.png`
+
+**Official app icon (Final):** dual symmetrical crescents — Cosmic Violet body, Solar Gold inner glow, Midnight plate.  
+`01_Master/InPhase_App_Icon_1024_Final.png` · site: `/brand/inphase/app-icon-1024.png`
 
 **Palette (brand board):** Midnight `#080D1A` · Cosmic Violet `#7B5CFF` · Lunar Lilac `#B689FF` · Solar Gold `#FFB86B` · Moonstone `#F5F5FA`
 

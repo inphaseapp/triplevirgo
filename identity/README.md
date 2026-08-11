@@ -38,7 +38,18 @@ When two layers disagree, document both and state which surface uses which strin
 | [`website.md`](./website.md) | triplevirgo.com design & copy decisions |
 | [`sources.md`](./sources.md) | Research provenance & supersessions |
 | [`products/`](./products/) | Per-product identity |
-| [`logos/`](./logos/) | Logo assets & usage |
+| [`logos/`](./logos/) | Logo assets & usage (canonical brand packs) |
+
+## Where to put brand folders
+
+Drop new packs on the Desktop (or Downloads) as a temporary inbox — then import into:
+
+```text
+identity/logos/<product>/     ← canonical archive (git)
+public/brand/<product>/       ← curated files for Brand Resources downloads
+```
+
+Do not commit AuthKeys, `.p8` files, or other secrets into brand folders. A personal mirror outside the repo can live at `~/Brand/TripleVirgo/` if useful; the repo remains source of truth for the company site.
 | [`icons/`](./icons/) | App / UI icon assets |
 | [`colors/`](./colors/) | Palette references |
 | [`typography/`](./typography/) | Type rules |
