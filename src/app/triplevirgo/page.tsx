@@ -22,7 +22,7 @@ export default function TripleVirgoStoryPage() {
       maxWidthClassName="max-w-xl"
       footer={
         <footer className="section-pad mx-auto flex max-w-xl flex-col items-center pb-24">
-          <Logo id="story-footer" size={56} />
+          <Logo id="story-footer" size={56} href="/" />
           <p className="mt-14 text-sm tracking-[0.08em] text-ink/40">
             © 2026 TripleVirgo, LLC
           </p>

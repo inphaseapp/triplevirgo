@@ -37,7 +37,7 @@ export function SecondaryPage({
           <SecondaryBack />
           <span className="hidden h-4 w-px bg-ink/10 sm:block" aria-hidden="true" />
           <div className="hidden sm:block">
-            <Logo id="secondary-header" size={28} withWordmark />
+            <Logo id="secondary-header" size={28} withWordmark href="/" />
           </div>
         </div>
         {headerTrailing ? (

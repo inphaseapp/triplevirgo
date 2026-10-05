@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 type LogoProps = {
   className?: string;
   size?: number;
@@ -9,6 +11,8 @@ type LogoProps = {
    * sacred — pearl / rose-gold symbol for the hero
    */
   variant?: "ink" | "sacred";
+  /** When set, wraps the mark in a link (e.g. `/` or `#home`). */
+  href?: string;
 };
 
 export function Logo({
@@ -17,10 +21,12 @@ export function Logo({
   withWordmark = false,
   id = "mark",
   variant = "ink",
+  href,
 }: LogoProps) {
   const glowId = `tv-glow-${id}`;
   const strokeId = `tv-stroke-${id}`;
   const isSacred = variant === "sacred";
+  const decorative = Boolean(withWordmark || href);
 
   const orbit = isSacred ? "#E8E0D4" : "#3D3558";
   const orbitOpacity = isSacred
@@ -30,7 +36,7 @@ export function Logo({
   const starFill = isSacred ? "#F7F3EE" : "#1A2038";
   const wordmarkClass = isSacred ? "text-pearl" : "text-ink";
 
-  return (
+  const mark = (
     <span className={`inline-flex items-center gap-3 ${className}`}>
       <svg
         width={size}
@@ -40,8 +46,8 @@ export function Logo({
         xmlns="http://www.w3.org/2000/svg"
         className={`max-w-full ${isSacred ? "logo-sacred" : "logo-shimmer"}`}
         role="img"
-        aria-hidden={withWordmark ? true : undefined}
-        aria-label={withWordmark ? undefined : "triplevirgo"}
+        aria-hidden={decorative ? true : undefined}
+        aria-label={decorative ? undefined : "triplevirgo"}
         style={{ opacity: isSacred ? 0.95 : 1 }}
       >
         <defs>
@@ -175,5 +181,17 @@ export function Logo({
         </span>
       ) : null}
     </span>
+  );
+
+  if (!href) return mark;
+
+  return (
+    <Link
+      href={href}
+      className="inline-flex transition-opacity duration-500 hover:opacity-90"
+    >
+      {mark}
+      <span className="sr-only">triplevirgo home</span>
+    </Link>
   );
 }

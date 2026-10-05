@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="relative border-t border-ink/8 pb-20 pt-28 md:pb-24 md:pt-36">
       <div className="section-pad mx-auto max-w-2xl text-center">
         <div className="mb-14 flex justify-center md:mb-16">
-          <Logo id="footer" size={52} />
+          <Logo id="footer" size={52} href="#home" />
         </div>
 
         <blockquote className="mx-auto max-w-md font-serif text-xl leading-[1.7] text-ink/85 md:text-2xl md:leading-[1.65]">
