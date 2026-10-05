@@ -104,7 +104,7 @@ export function PressKit() {
       }
       footer={
         <footer className="section-pad mx-auto flex max-w-5xl flex-col items-center pb-20 md:pb-24">
-          <Logo id="press-footer" size={48} />
+          <Logo id="press-footer" size={48} href="/" />
           <p className="mt-12 text-sm tracking-[0.08em] text-ink/40">
             © 2026 TripleVirgo, LLC
           </p>
