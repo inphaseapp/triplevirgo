@@ -55,9 +55,9 @@ Communication · Appreciation · Boundaries · Conflict repair · Shared goals �
 
 ## Brand / visual
 
-No separate OurPhase icon source-of-truth document was found in this research pass comparable to MyPhase’s gemstone SOT. OurPhase inherits the shared Phase platform design philosophy (calm, elegant, premium, spacious, intentional) and constellation treatment on the company site (guiding star behind title; no connector lines between apps).
+Official mark and logo live in Brand Resources (`public/brand/ourphase/` on triplevirgo.com) and the OurPhase press kit (`ourphase.app/press-kit`).
 
-When an official mark is locked, place it in `identity/logos/ourphase/` and document it here.
+Warm paper, quiet ochre, matte walnut — Source Serif 4 + DM Sans.
 
 ## Gaps (not invented)
 

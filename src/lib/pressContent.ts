@@ -160,6 +160,19 @@ export const productPalettes: ProductPalette[] = [
       { name: "Moonstone", hex: "#F5F5FA", role: "Light" },
     ],
   },
+  {
+    id: "ourphase",
+    label: "OurPhase",
+    note: "Warm paper, quiet ochre, matte walnut — from the OurPhase press kit.",
+    colors: [
+      { name: "Ivory", hex: "#F6F1E8", role: "Ground" },
+      { name: "Parchment", hex: "#EFE6D6", role: "Soft surface" },
+      { name: "Ochre", hex: "#A28658", role: "Accent" },
+      { name: "Honey", hex: "#D4C08A", role: "Warm light" },
+      { name: "Walnut", hex: "#7A5840", role: "Secondary" },
+      { name: "Espresso", hex: "#534636", role: "Type" },
+    ],
+  },
 ];
 
 /** From identity/press/faq.md — keep in sync. */
@@ -357,6 +370,38 @@ export const downloadGroups: DownloadGroup[] = [
         description: "Identity sheet — palette, type, lockups, usage.",
         href: "/brand/inphase/brand-board.png",
         filename: "InPhase_Brand_Board_v1.png",
+      },
+    ],
+  },
+  {
+    id: "ourphase",
+    label: "OurPhase",
+    note: "Warm paper mark — ochre and walnut. Product still coming soon.",
+    items: [
+      {
+        name: "Brand kit",
+        description: "Mark, logo, and standalone press-kit page.",
+        href: "/brand/ourphase/ourphase-brand-kit.zip",
+        filename: "ourphase-brand-kit.zip",
+        primary: true,
+      },
+      {
+        name: "Mark",
+        description: "App mark — textured paper, 1024×1024.",
+        href: "/brand/ourphase/ourphase-mark.png",
+        filename: "OurPhase_Mark.png",
+      },
+      {
+        name: "Logo",
+        description: "Primary logo plate.",
+        href: "/brand/ourphase/ourphase-logo.jpg",
+        filename: "OurPhase_Logo.jpg",
+      },
+      {
+        name: "Press kit page",
+        description: "Colors, type, and downloadable assets.",
+        href: "/brand/ourphase/index.html",
+        filename: "OurPhase_Press_Kit.html",
       },
     ],
   },
