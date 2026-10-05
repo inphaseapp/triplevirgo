@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function SupportPage() {
   return (
-    <LegalPage title="Support">
+    <LegalPage title="Support" current="support">
       <p>
         We&apos;re here to help — thoughtfully and with care. For product
         questions, partnership inquiries, or general support, reach us at:

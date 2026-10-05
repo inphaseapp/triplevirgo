@@ -1,19 +1,54 @@
+import Link from "next/link";
 import type { ReactNode } from "react";
 import { SecondaryPage } from "./SecondaryPage";
 
+const legalLinks = [
+  { href: "/privacy", label: "Privacy", id: "privacy" },
+  { href: "/terms", label: "Terms", id: "terms" },
+  { href: "/support", label: "Support", id: "support" },
+] as const;
+
+export type LegalPageId = (typeof legalLinks)[number]["id"];
+
 type LegalPageProps = {
   title: string;
+  current: LegalPageId;
   children: ReactNode;
 };
 
-export function LegalPage({ title, children }: LegalPageProps) {
+export function LegalPage({ title, current, children }: LegalPageProps) {
   return (
     <SecondaryPage
       showClose
       maxWidthClassName="max-w-2xl"
       footer={
-        <footer className="section-pad pb-16 text-center text-sm tracking-wide text-ink/40">
-          © 2026 TripleVirgo, LLC
+        <footer className="section-pad pb-16 text-center">
+          <nav aria-label="Legal pages">
+            <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+              {legalLinks.map((link) => (
+                <li key={link.href}>
+                  {link.id === current ? (
+                    <span
+                      className="nav-link normal-case tracking-[0.1em] text-ink/35"
+                      aria-current="page"
+                    >
+                      {link.label}
+                    </span>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="nav-link normal-case tracking-[0.1em]"
+                    >
+                      {link.label}
+                    </Link>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <p className="mt-10 text-sm tracking-wide text-ink/40">
+            © 2026 TripleVirgo, LLC
+          </p>
         </footer>
       }
     >

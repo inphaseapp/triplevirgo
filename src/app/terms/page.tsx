@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <LegalPage title="Terms">
+    <LegalPage title="Terms" current="terms">
       <p>Last updated: August 7, 2026</p>
       <p>
         By accessing triplevirgo.com, you agree to these terms. The site is

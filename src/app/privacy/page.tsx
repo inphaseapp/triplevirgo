@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <LegalPage title="Privacy Policy">
+    <LegalPage title="Privacy Policy" current="privacy">
       <p>Last updated: August 7, 2026</p>
       <p>
         TripleVirgo, LLC (&ldquo;TripleVirgo,&rdquo; &ldquo;we,&rdquo;
