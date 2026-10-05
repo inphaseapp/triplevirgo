@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Logo } from "./Logo";
-import { SecondaryBack, SecondaryClose } from "./SecondaryNav";
+import { SecondaryPage } from "./SecondaryPage";
 import {
   companyColors,
   companyColorsCore,
@@ -93,22 +93,24 @@ function AssetPlaceholder({
 
 export function PressKit() {
   return (
-    <div className="cosmic-bg min-h-screen">
-      <header className="section-pad mx-auto flex h-[5.25rem] max-w-5xl items-center justify-between pt-[env(safe-area-inset-top)]">
-        <div className="flex items-center gap-6 md:gap-8">
-          <SecondaryBack />
-          <span className="hidden h-4 w-px bg-ink/10 sm:block" aria-hidden="true" />
-          <div className="hidden sm:block">
-            <Logo id="press-header" size={28} withWordmark />
-          </div>
-        </div>
-        <nav aria-label="Brand resources header">
-          <a href="#contact" className="nav-link">
-            Contact
-          </a>
-        </nav>
-      </header>
-
+    <SecondaryPage
+      showClose
+      maxWidthClassName="max-w-5xl"
+      headerNavLabel="Brand resources header"
+      headerTrailing={
+        <a href="#contact" className="nav-link">
+          Contact
+        </a>
+      }
+      footer={
+        <footer className="section-pad mx-auto flex max-w-5xl flex-col items-center pb-20 md:pb-24">
+          <Logo id="press-footer" size={48} />
+          <p className="mt-12 text-sm tracking-[0.08em] text-ink/40">
+            © 2026 TripleVirgo, LLC
+          </p>
+        </footer>
+      }
+    >
       <main>
         {/* Intro */}
         <section className="section-pad relative mx-auto max-w-5xl pb-20 pt-16 md:pb-28 md:pt-24">
@@ -657,15 +659,6 @@ export function PressKit() {
           </section>
         </div>
       </main>
-
-      <SecondaryClose />
-
-      <footer className="section-pad mx-auto flex max-w-5xl flex-col items-center pb-20 md:pb-24">
-        <Logo id="press-footer" size={48} />
-        <p className="mt-12 text-sm tracking-[0.08em] text-ink/40">
-          © 2026 TripleVirgo, LLC
-        </p>
-      </footer>
-    </div>
+    </SecondaryPage>
   );
 }

@@ -8,6 +8,8 @@ type SecondaryPageProps = {
   showClose?: boolean;
   /** Optional header actions (e.g. in-page Contact). */
   headerTrailing?: ReactNode;
+  /** Accessible name for the header actions nav. */
+  headerNavLabel?: string;
   /** Content column max width. */
   maxWidthClassName?: string;
   /** Optional footer below Close (e.g. copyright). */
@@ -22,6 +24,7 @@ export function SecondaryPage({
   children,
   showClose = true,
   headerTrailing,
+  headerNavLabel = "Page",
   maxWidthClassName = "max-w-2xl",
   footer,
 }: SecondaryPageProps) {
@@ -38,7 +41,7 @@ export function SecondaryPage({
           </div>
         </div>
         {headerTrailing ? (
-          <nav aria-label="Page">{headerTrailing}</nav>
+          <nav aria-label={headerNavLabel}>{headerTrailing}</nav>
         ) : (
           <span className="w-16" aria-hidden="true" />
         )}
