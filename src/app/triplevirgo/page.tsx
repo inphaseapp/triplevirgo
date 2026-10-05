@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Logo } from "@/components/Logo";
+import { SecondaryPage } from "@/components/SecondaryPage";
 
 export const metadata: Metadata = {
   title: {
@@ -17,38 +17,30 @@ export const metadata: Metadata = {
 
 export default function TripleVirgoStoryPage() {
   return (
-    <div className="cosmic-bg min-h-screen">
-      <header className="section-pad mx-auto flex h-[5.25rem] max-w-xl items-center">
-        <Link
-          href="/"
-          className="transition-opacity duration-500 hover:opacity-90"
-        >
-          <Logo id="story-header" size={30} withWordmark />
-          <span className="sr-only">triplevirgo home</span>
-        </Link>
-      </header>
-
+    <SecondaryPage
+      showClose
+      maxWidthClassName="max-w-xl"
+      footer={
+        <footer className="section-pad mx-auto flex max-w-xl flex-col items-center pb-24">
+          <Logo id="story-footer" size={56} />
+          <p className="mt-14 text-sm tracking-[0.08em] text-ink/40">
+            © 2026 TripleVirgo, LLC
+          </p>
+        </footer>
+      }
+    >
       <main className="section-pad mx-auto max-w-xl pb-8 pt-16 md:pt-24">
         <article>
-          <h1
-            className="animate-fade-rise font-serif text-[clamp(2.2rem,4.5vw,3.25rem)] leading-[1.12] tracking-tight text-ink"
-            style={{ animationDelay: "0.1s" }}
-          >
+          <h1 className="animate-fade-rise font-serif text-[clamp(2.2rem,4.5vw,3.25rem)] leading-[1.12] tracking-tight text-ink">
             triplevirgo
           </h1>
 
           <div className="mt-14 space-y-8 text-base leading-[2] text-ink/60 md:mt-16 md:text-[1.05rem] md:leading-[2.05]">
-            <p
-              className="animate-fade-rise"
-              style={{ animationDelay: "0.28s" }}
-            >
+            <p className="animate-fade-rise" style={{ animationDelay: "0.28s" }}>
               Every meaningful company begins with a question.
             </p>
 
-            <p
-              className="animate-fade-rise"
-              style={{ animationDelay: "0.4s" }}
-            >
+            <p className="animate-fade-rise" style={{ animationDelay: "0.4s" }}>
               For us, it was this:
             </p>
 
@@ -68,19 +60,13 @@ export default function TripleVirgoStoryPage() {
           />
 
           <div className="space-y-8 text-base leading-[2] text-ink/60 md:text-[1.05rem] md:leading-[2.05]">
-            <p
-              className="animate-fade-rise"
-              style={{ animationDelay: "0.8s" }}
-            >
+            <p className="animate-fade-rise" style={{ animationDelay: "0.8s" }}>
               TripleVirgo was born from the idea that deeper understanding
               creates stronger relationships—with ourselves, with each other,
               and with the world around us.
             </p>
 
-            <p
-              className="animate-fade-rise"
-              style={{ animationDelay: "0.95s" }}
-            >
+            <p className="animate-fade-rise" style={{ animationDelay: "0.95s" }}>
               The name comes from our founder Jeane Divine&apos;s natal chart—
               <strong className="font-medium text-ink/80">
                 Sun, Rising, and Venus in Virgo
@@ -89,10 +75,7 @@ export default function TripleVirgoStoryPage() {
               observation can become acts of service.
             </p>
 
-            <p
-              className="animate-fade-rise"
-              style={{ animationDelay: "1.1s" }}
-            >
+            <p className="animate-fade-rise" style={{ animationDelay: "1.1s" }}>
               Today, TripleVirgo builds technology that helps people better
               understand themselves and one another.
             </p>
@@ -127,21 +110,6 @@ export default function TripleVirgoStoryPage() {
           </section>
         </article>
       </main>
-
-      <footer className="section-pad mx-auto flex max-w-xl flex-col items-center pb-24 pt-28 md:pb-32 md:pt-36">
-        <div
-          className="animate-fade-rise"
-          style={{ animationDelay: "1.45s" }}
-        >
-          <Logo id="story-footer" size={56} />
-        </div>
-        <p
-          className="animate-fade-rise mt-14 text-sm tracking-[0.08em] text-ink/40"
-          style={{ animationDelay: "1.6s" }}
-        >
-          © 2026 TripleVirgo, LLC
-        </p>
-      </footer>
-    </div>
+    </SecondaryPage>
   );
 }

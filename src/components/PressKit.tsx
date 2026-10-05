@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Logo } from "./Logo";
+import { SecondaryBack, SecondaryClose } from "./SecondaryNav";
 import {
   companyColors,
   companyColorsCore,
@@ -94,24 +94,18 @@ function AssetPlaceholder({
 export function PressKit() {
   return (
     <div className="cosmic-bg min-h-screen">
-      <header className="section-pad mx-auto flex h-[5.25rem] max-w-5xl items-center justify-between">
-        <Link href="/" className="transition-opacity duration-500 hover:opacity-90">
-          <Logo id="press-header" size={30} withWordmark />
-          <span className="sr-only">triplevirgo home</span>
-        </Link>
+      <header className="section-pad mx-auto flex h-[5.25rem] max-w-5xl items-center justify-between pt-[env(safe-area-inset-top)]">
+        <div className="flex items-center gap-6 md:gap-8">
+          <SecondaryBack />
+          <span className="hidden h-4 w-px bg-ink/10 sm:block" aria-hidden="true" />
+          <div className="hidden sm:block">
+            <Logo id="press-header" size={28} withWordmark />
+          </div>
+        </div>
         <nav aria-label="Brand resources header">
-          <ul className="flex items-center gap-8">
-            <li>
-              <Link href="/" className="nav-link">
-                Home
-              </Link>
-            </li>
-            <li>
-              <a href="#contact" className="nav-link">
-                Contact
-              </a>
-            </li>
-          </ul>
+          <a href="#contact" className="nav-link">
+            Contact
+          </a>
         </nav>
       </header>
 
@@ -664,8 +658,9 @@ export function PressKit() {
         </div>
       </main>
 
-      <footer className="section-pad mx-auto flex max-w-5xl flex-col items-center pb-20 pt-28 md:pb-24 md:pt-36">
-        <div className="divider-line mb-14" />
+      <SecondaryClose />
+
+      <footer className="section-pad mx-auto flex max-w-5xl flex-col items-center pb-20 md:pb-24">
         <Logo id="press-footer" size={48} />
         <p className="mt-12 text-sm tracking-[0.08em] text-ink/40">
           © 2026 TripleVirgo, LLC
