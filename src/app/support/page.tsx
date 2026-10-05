@@ -28,9 +28,8 @@ export default function SupportPage() {
         </a>
       </p>
       <p>
-        For app-specific support, please visit the support resources within
-        InPhase or MyPhase when available. OurPhase support will be offered when
-        the product launches.
+        For app-specific help, use the support resources in MyPhase or InPhase.
+        OurPhase support will be offered when the product launches.
       </p>
       <p className="pt-2 text-ink/45">
         We typically respond within a few business days.
