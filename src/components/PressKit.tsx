@@ -40,57 +40,6 @@ function SectionHeading({
   );
 }
 
-function AssetPlaceholder({
-  label,
-  hint,
-  tone = "mist",
-}: {
-  label: string;
-  hint: string;
-  tone?: "mist" | "night";
-}) {
-  const night = tone === "night";
-  return (
-    <div
-      className="relative flex aspect-square w-full flex-col items-center justify-center overflow-hidden px-6 text-center"
-      style={{
-        background: night
-          ? `radial-gradient(ellipse 70% 55% at 50% 42%, rgba(80, 90, 130, 0.35), transparent 65%),
-             linear-gradient(180deg, #0a1020 0%, #121a32 55%, #1e2748 100%)`
-          : `linear-gradient(160deg, rgba(255,255,255,0.42) 0%, rgba(247,243,238,0.22) 100%)`,
-        border: night
-          ? "1px solid rgba(247, 243, 238, 0.1)"
-          : "1px solid rgba(26, 32, 56, 0.08)",
-      }}
-      aria-label={`${label} — mark soon`}
-    >
-      <div
-        className="pointer-events-none absolute inset-0 opacity-40"
-        aria-hidden="true"
-        style={{
-          background: night
-            ? "radial-gradient(circle at 50% 48%, rgba(196,160,122,0.12), transparent 45%)"
-            : "radial-gradient(circle at 50% 40%, rgba(184,137,114,0.1), transparent 55%)",
-        }}
-      />
-      <span
-        className={`relative font-serif text-xl tracking-wide ${
-          night ? "text-pearl/85" : "text-ink/70"
-        }`}
-      >
-        {label}
-      </span>
-      <span
-        className={`relative mt-3 text-[0.65rem] uppercase tracking-[0.22em] ${
-          night ? "text-pearl/40" : "text-ink/35"
-        }`}
-      >
-        {hint}
-      </span>
-    </div>
-  );
-}
-
 export function PressKit() {
   return (
     <SecondaryPage
@@ -318,8 +267,8 @@ export function PressKit() {
               <span className="text-ink/70">triplevirgo</span> — sacred geometry
               on dusk and night. MyPhase — moonstone and rose quartz crescents.
               InPhase — Cosmic Violet and Solar Gold in dual light. OurPhase —
-              arrives with the product. Each is identity, not ornament; give the
-              form room to breathe.
+              warm paper, ochre, and walnut. Each is identity, not ornament; give
+              the form room to breathe.
             </p>
 
             <ul className="mt-14 grid grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-4 md:gap-x-8">
@@ -387,9 +336,23 @@ export function PressKit() {
               </li>
 
               <li>
-                <AssetPlaceholder label="OurPhase" hint="Soon" tone="mist" />
+                <div
+                  className="relative flex aspect-square items-center justify-center overflow-hidden"
+                  style={{
+                    background: "#F6F1E8",
+                    border: "1px solid rgba(26, 32, 56, 0.08)",
+                  }}
+                >
+                  <Image
+                    src="/brand/ourphase/ourphase-mark.png"
+                    alt="OurPhase mark — warm paper"
+                    width={512}
+                    height={512}
+                    className="h-[72%] w-[72%] object-contain"
+                  />
+                </div>
                 <p className="mt-5 font-serif text-lg text-ink">OurPhase</p>
-                <p className="mt-1 text-sm text-ink/45">With the product</p>
+                <p className="mt-1 text-sm text-ink/45">Paper, ochre & walnut</p>
               </li>
             </ul>
 
@@ -579,7 +542,6 @@ export function PressKit() {
             <SectionHeading id="downloads" label="Downloads" title="Brand kits" />
             <p className="max-w-xl text-base leading-[1.9] text-ink/55">
               Begin with a brand kit, then take individual masters as you need them.
-              OurPhase arrives when its mark is ready.
             </p>
 
             <div className="mt-14 space-y-16">
