@@ -223,17 +223,35 @@ export function PressKit() {
           {/* Founder */}
           <section aria-labelledby="founder">
             <SectionHeading id="founder" label="Founder" title="Why the name" />
-            <div className="max-w-xl space-y-8 text-base leading-[2] text-ink/60 md:text-[1.05rem]">
-              {founderCopy.paragraphs.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-              <div className="space-y-4 pt-6 text-ink/70">
-                <p className="section-label">North Star</p>
-                {companyFacts.northStar.map((line) => (
-                  <p key={line}>{line}</p>
+            <div className="grid items-start gap-12 md:grid-cols-[minmax(0,16rem)_1fr] md:gap-16">
+              <figure className="mx-auto w-full max-w-[16rem] md:mx-0">
+                <div className="relative aspect-[3/4] overflow-hidden">
+                  <Image
+                    src={founderCopy.portrait.src}
+                    alt={founderCopy.portrait.alt}
+                    width={founderCopy.portrait.width}
+                    height={founderCopy.portrait.height}
+                    className="h-full w-full object-cover object-[center_20%]"
+                    sizes="(max-width: 768px) 16rem, 16rem"
+                    priority={false}
+                  />
+                </div>
+                <figcaption className="mt-4 text-sm tracking-[0.06em] text-ink/45">
+                  Jeane Divine
+                </figcaption>
+              </figure>
+
+              <div className="max-w-xl space-y-8 text-base leading-[2] text-ink/60 md:text-[1.05rem]">
+                {founderCopy.paragraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
                 ))}
+                <div className="space-y-4 pt-6 text-ink/70">
+                  <p className="section-label">North Star</p>
+                  {companyFacts.northStar.map((line) => (
+                    <p key={line}>{line}</p>
+                  ))}
+                </div>
               </div>
-              <p className="pt-2 text-sm text-ink/40">{founderCopy.portraitNote}</p>
             </div>
           </section>
 

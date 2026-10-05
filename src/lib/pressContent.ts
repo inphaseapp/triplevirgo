@@ -55,7 +55,12 @@ export const founderCopy = {
     "The name comes from our founder Jeane Divine’s natal chart — Sun, Rising, and Venus in Virgo — a reminder that curiosity, thoughtful design, and careful observation can become acts of service.",
     "Today, TripleVirgo builds technology that inspires people to better understand themselves and one another.",
   ],
-  portraitNote: "Founder portrait soon.",
+  portrait: {
+    src: "/brand/triplevirgo/founder-portrait.jpg",
+    alt: "Jeane Divine, founder of TripleVirgo",
+    width: 768,
+    height: 1024,
+  },
 } as const;
 
 export const products = [
