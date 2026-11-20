@@ -38,11 +38,20 @@ const stars = [
   },
 ] as const;
 
+const within = {
+  name: "within",
+  lead: "Find your way back to yourself.",
+  description: "A gentle practice for exploring how you want to feel.",
+  cta: "Try Within",
+  href: "/within",
+  available: true,
+} as const;
+
 function StarCard({
   star,
   index,
 }: {
-  star: (typeof stars)[number];
+  star: (typeof stars)[number] | typeof within;
   index: number;
 }) {
   return (
@@ -175,6 +184,10 @@ export function Constellation() {
             </ul>
           </div>
         </div>
+
+        <article className="mx-auto mt-20 max-w-[280px] text-center md:mt-0">
+          <StarCard star={within} index={stars.length} />
+        </article>
 
         <p className="mx-auto mt-20 max-w-sm text-center text-sm leading-[1.9] tracking-wide text-ink/40 md:mt-24">
           One constellation under the TripleVirgo philosophy — with room for
