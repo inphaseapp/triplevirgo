@@ -10,12 +10,6 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
-        source: "/within/:path*",
-        has: [{ type: "host", value: ".*\\.netlify\\.app" }],
-        destination: "https://triplevirgo.com/within/:path*",
-        permanent: false,
-      },
-      {
         source: "/why",
         destination: "/triplevirgo",
         permanent: true,
