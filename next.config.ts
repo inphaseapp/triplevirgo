@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   async rewrites() {
-    return ["/within", "/within/evidence", "/within/me"].map((source) => ({
+    return ["/within", "/within/evidence", "/within/energy-centers", "/within/me"].map((source) => ({
       source,
       destination: "/within/index.html",
     }));
